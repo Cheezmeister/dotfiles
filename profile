@@ -1,0 +1,5 @@
+export EDITOR='vim'
+export VISUAL='vim'
+export TERMINAL='xfce4-terminal'
+export FILE_MANAGER='nautilus'
+export WEB_BROWSER='firefox'
