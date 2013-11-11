@@ -21,6 +21,7 @@ alias edsrc="$EDITOR ~/.zshrc"
 alias web=$WEB_BROWSER
 alias term=$TERMINAL
 alias fm='$FILE_MANAGER .'
+alias open='$OPENER'
 
 # Misc
 alias ls='ls --color=auto'
