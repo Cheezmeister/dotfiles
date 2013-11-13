@@ -1,6 +1,6 @@
-DOTFILES=~/dotfiles
+DOTFILES=~/stuff/dotfiles
 
-for rc in zshrc vimrc 
+for rc in zshrc vimrc tmux.conf profile xinitrc
 do
   if [ ! -e $DOTFILES/$rc ]; then 
     continue 
