@@ -7,13 +7,14 @@
 
 " Because who uses man pages anyway
 map K :filetype detect<CR>
+map <space> :w<CR>
 
 " --------------------------------------------------------------------------------
 " Misc
 " --------------------------------------------------------------------------------
 set nowrap " Wrapping is 4 n00bz
 set mouse=""
-set timeoutlen=100 ttimeoutlen=10
+set timeoutlen=300 
 set noswapfile " Do u even Git!?
 
 " --------------------------------------------------------------------------------
