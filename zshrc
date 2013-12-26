@@ -7,11 +7,16 @@ export PS1=$PROMPT
 alias gs='git status'
 alias gsh='git stash'
 alias gd='git diff --color=auto'
+alias gds='gd --staged'
+alias gcm='git commit --message'
+alias gca='git commit --all'
+alias gcam='gca --message'
 
 # Tmux
 alias ta='tmux attach -t'
 alias td='tmux detach'
 alias tlss='tmux list-sessions'
+alias tns='tmux new-session -s'
 
 # Meta
 alias resrc='source ~/.zshrc'

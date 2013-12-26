@@ -6,15 +6,18 @@
 " --------------------------------------------------------------------------------
 
 " Because who uses man pages anyway
-map K :filetype detect<CR>
-map <space> :w<CR>
+nnoremap K :filetype detect<CR>
+" Because yy the hell not?
+nnoremap Y y$
+" Because L key said so
+nnoremap <space> :w<CR>
 
 " --------------------------------------------------------------------------------
 " Misc
 " --------------------------------------------------------------------------------
 set nowrap " Wrapping is 4 n00bz
 set mouse=""
-set timeoutlen=300 
+set timeoutlen=500
 set noswapfile " Do u even Git!?
 
 " --------------------------------------------------------------------------------
@@ -31,9 +34,12 @@ nnoremap <leader>t :split .todo<cr>
 nnoremap <leader>o :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>? :!xdg-open 'http://hea-www.harvard.edu/~fine/Tech/vi.html'<cr>
+nnoremap <leader>v :call VimuxRunCommand("")
 
 " Commenting
-vnoremap <leader>c <C-V>0I
+vnoremap <leader>cc <C-V>0I// <esc>
+vnoremap <leader>cs <C-V>0I# <esc>
+vnoremap <leader>cv <C-V>0I" <esc>
 
 
 " --------------------------------------------------------------------------------
