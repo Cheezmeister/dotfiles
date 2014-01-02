@@ -16,21 +16,23 @@ nnoremap <space> :w<CR>
 " Misc
 " --------------------------------------------------------------------------------
 set nowrap " Wrapping is 4 n00bz
-set mouse=""
-set timeoutlen=500
+set mouse="" " id.
+set ttimeout ttimeoutlen=100 " I'm not on dialup
+set timeout timeoutlen=400 " Nor the world's fastest typist
 set noswapfile " Do u even Git!?
 
 " --------------------------------------------------------------------------------
 "  Leader Mappings
 " --------------------------------------------------------------------------------
-" All the cool kids use comma. Not this punk.
-let mapleader = "\\"
+
+" Misc
+nnoremap <leader>t :split .todo<cr>
 
 " Meta
 nnoremap <leader>e :edit $MYVIMRC<cr>
 nnoremap <leader>r :source $MYVIMRC<cr>
-nnoremap <leader>t :split .todo<cr>
 
+" Pluginery
 nnoremap <leader>o :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>? :!xdg-open 'http://hea-www.harvard.edu/~fine/Tech/vi.html'<cr>
