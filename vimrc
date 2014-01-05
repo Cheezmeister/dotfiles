@@ -36,7 +36,7 @@ nnoremap <leader>r :source $MYVIMRC<cr>
 nnoremap <leader>o :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>? :!xdg-open 'http://hea-www.harvard.edu/~fine/Tech/vi.html'<cr>
-nnoremap <leader>v :call VimuxRunCommand("")
+nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
 
 " Commenting
 vnoremap <leader>cc <C-V>0I// <esc>
