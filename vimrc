@@ -32,7 +32,7 @@ set omnifunc=syntaxcomplete#Complete
 " --------------------------------------------------------------------------------
 
 " Misc
-nnoremap <leader>t :split .todo<cr>
+nnoremap <leader>tt :split .todo<cr>
 
 " Meta
 nnoremap <leader>e :edit $MYVIMRC<cr>
@@ -49,10 +49,20 @@ nmap <leader>sc <leader>vctags -R .<cr>
 nmap <leader>sm <leader>vmake<cr>
 
 " Commenting - C-Family; Scripting languages; Vim
+nnoremap <leader>cc 0i// <esc>
+nnoremap <leader>cs 0i# <esc>
+nnoremap <leader>cv 0i" <esc>
 vnoremap <leader>cc <C-V>0I// <esc>
 vnoremap <leader>cs <C-V>0I# <esc>
 vnoremap <leader>cv <C-V>0I" <esc>
 
+" Toggling things
+nnoremap <leader>tn :NERDTreeToggle<cr>
+nnoremap <leader>to :TagbarToggle<cr>
+nnoremap <leader>tl :set number!<cr>
+nnoremap <leader>tp :set paste!<cr>
+nnoremap <leader>tw :set wrap!<cr>
+nmap <leader>ta <leader>tn <leader>to <leader>tl
 
 " --------------------------------------------------------------------------------
 "  AutoCmds
