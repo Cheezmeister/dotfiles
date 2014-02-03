@@ -5,6 +5,8 @@
 "  Dangerous things
 " --------------------------------------------------------------------------------
 
+" Because pasting hurts my poor fingers otherwise
+inoremap <leader>j <C-R>"
 " Because who uses man pages anyway
 nnoremap K :filetype detect<CR>
 " Because yy the hell not?
@@ -14,6 +16,14 @@ nnoremap <space>q :q<CR>
 nnoremap <space>x :x<CR>
 nnoremap <space>w :w<CR>
 nnoremap <space><space> :w<CR>
+
+" --------------------------------------------------------------------------------
+"  Tweaks
+" --------------------------------------------------------------------------------
+
+" Leave 4 lines of context
+nnoremap z<CR> z<CR>4<C-Y>
+nnoremap zb zb4<C-E>
 
 " --------------------------------------------------------------------------------
 " Misc
@@ -26,6 +36,8 @@ set timeout timeoutlen=400 " Nor the world's fastest typist
 set noswapfile " Do u even Git!?
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+set incsearch
+set cursorline
 
 " --------------------------------------------------------------------------------
 "  Leader Mappings
@@ -43,6 +55,7 @@ nnoremap <leader>o :TagbarToggle<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>? :!open 'http://hea-www.harvard.edu/~fine/Tech/vi.html'<cr>
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
+nnoremap <leader>b :wa<cr>:call VimuxRunLastCommand()<cr>
 
 " Shell commands
 nmap <leader>sc <leader>vctags -R .<cr>

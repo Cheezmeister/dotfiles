@@ -11,6 +11,7 @@ alias gds='git diff --color=auto --staged'
 alias gcm='git commit --message'
 alias gca='git commit --all'
 alias gcam='git commit --all --message'
+alias gpom='git pull origin master'
 
 # Tmux
 alias ta='tmux attach -t'
