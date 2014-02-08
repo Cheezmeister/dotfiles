@@ -51,8 +51,6 @@ nnoremap <leader>e :edit $MYVIMRC<cr>
 nnoremap <leader>r :source $MYVIMRC<cr>
 
 " Pluginery
-nnoremap <leader>o :TagbarToggle<cr>
-nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>? :!open 'http://hea-www.harvard.edu/~fine/Tech/vi.html'<cr>
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
 nnoremap <leader>b :wa<cr>:call VimuxRunLastCommand()<cr>
@@ -75,7 +73,7 @@ nnoremap <leader>to :TagbarToggle<cr>
 nnoremap <leader>tl :set number!<cr>
 nnoremap <leader>tp :set paste!<cr>
 nnoremap <leader>tw :set wrap!<cr>
-nmap <leader>ta <leader>tn <leader>to <leader>tl
+nmap <leader>ta <leader>tn <leader>to
 
 " --------------------------------------------------------------------------------
 "  AutoCmds

@@ -4,16 +4,12 @@ export PROMPT="%B%F{yellow}%l%F{blue}%1v%f %#%f%b "
 export PS1=$PROMPT
 
 # Git 
+alias g='git'
 alias gs='git status'
-alias gsh='git stash'
-alias gd='git diff --color=auto'
-alias gds='git diff --color=auto --staged'
-alias gcm='git commit --message'
-alias gca='git commit --all'
-alias gcam='git commit --all --message'
-alias gpom='git pull origin master'
+alias gd='git diff'
 
 # Tmux
+alias t='tmux'
 alias ta='tmux attach -t'
 alias td='tmux detach'
 alias trw='tmux rename-window'
@@ -35,7 +31,6 @@ alias synergys-boot='killall synergys && synergys -d INFO'
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
 
-eval $(dircolors -b)
 unsetopt CASE_GLOB  
 setopt EXTENDED_GLOB
 
