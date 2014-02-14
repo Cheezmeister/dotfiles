@@ -1,0 +1,2 @@
+$ ->
+  $('hot-network-questions').hide()
