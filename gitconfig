@@ -3,7 +3,7 @@
     email = @gmail
 
 [core]
-    pager = cat
+    pager = less
     editor = vim
     excludesfile =~/.gitignore
 

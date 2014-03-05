@@ -3,18 +3,28 @@ export RPROMPT="%B%F{cyan}%~%f%b | %n@%M | %B%F{green}%D{%a %b %d} %D{%I:%M:%S%P
 export PROMPT="%B%F{yellow}%l%F{blue}%1v%f %#%f%b "
 export PS1=$PROMPT
 
-# Git 
+# Path
+export PATH=$PATH:~/bin
+
+# Alphabeticals
+alias a='ls -alph'
+alias d='cd'
+alias e='exit'
 alias g='git'
+alias l='ls -lph'
+alias s='ls'
+alias u='cd ..'
+alias x='tmux -2'
+
+# Git
 alias gs='git status'
 alias gd='git diff'
 
 # Tmux
-alias t='tmux'
-alias ta='tmux attach -t'
-alias td='tmux detach'
-alias trw='tmux rename-window'
-alias tlss='tmux list-sessions'
-alias tns='tmux new-session -s'
+alias ta='tmux -2 attach -t'
+alias td='tmux -2 detach'
+alias tlss='tmux -2 list-sessions'
+alias tns='tmux -2 new-session -s'
 
 # Meta
 alias resrc='source ~/.zshrc'
@@ -27,10 +37,12 @@ alias fm='$FILE_MANAGER .'
 alias open='$OPENER'
 
 # Misc
-alias synergys-boot='killall synergys && synergys -d INFO'
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
 
-unsetopt CASE_GLOB  
-setopt EXTENDED_GLOB
+setopt extendedglob
 
+# From http://bit.ly/Nuqs2R
+## case-insensitive (all),partial-word and then substring completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
+    'r:|[._-]=* r:|=*' 'l:|=* r:|=*'

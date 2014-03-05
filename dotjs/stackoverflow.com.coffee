@@ -1,2 +1,2 @@
 $ ->
-  $('hot-network-questions').hide()
+  $('#hot-network-questions').hide()

@@ -6,7 +6,7 @@
 " --------------------------------------------------------------------------------
 
 " Because pasting hurts my poor fingers otherwise
-inoremap <leader>j <C-R>"
+inoremap <C-R><C-R> <C-R>"
 " Because who uses man pages anyway
 nnoremap K :filetype detect<CR>
 " Because yy the hell not?
@@ -15,7 +15,12 @@ nnoremap Y y$
 nnoremap <space>q :q<CR>
 nnoremap <space>x :x<CR>
 nnoremap <space>w :w<CR>
-nnoremap <space><space> :w<CR>
+nnoremap <space>e :e<CR>
+" Because H key said so
+nnoremap <BS> :
+
+" Because I'm a horrible person
+cnoremap w!! w !sudo tee > /dev/null %
 
 " --------------------------------------------------------------------------------
 "  Tweaks
@@ -38,6 +43,7 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set incsearch
 set cursorline
+set hidden
 
 " --------------------------------------------------------------------------------
 "  Leader Mappings
@@ -54,6 +60,10 @@ nnoremap <leader>r :source $MYVIMRC<cr>
 nnoremap <leader>? :!open 'http://hea-www.harvard.edu/~fine/Tech/vi.html'<cr>
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
 nnoremap <leader>b :wa<cr>:call VimuxRunLastCommand()<cr>
+
+" Windows
+nnoremap <leader>wv :vsplit<cr>
+nnoremap <leader>ws :split<cr>
 
 " Shell commands
 nmap <leader>sc <leader>vctags -R .<cr>
