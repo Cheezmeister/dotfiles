@@ -7,11 +7,12 @@ export PS1=$PROMPT
 export PATH=$PATH:~/bin
 
 # Alphabeticals
-alias a='ls -alph'
+alias a='ls -aph'
 alias d='cd'
 alias e='exit'
 alias g='git'
 alias l='ls -lph'
+alias m=$PAGER
 alias s='ls'
 alias u='cd ..'
 alias x='tmux -2'
