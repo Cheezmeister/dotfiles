@@ -8,9 +8,11 @@ export PATH=$PATH:~/bin
 
 # Alphabeticals
 alias a='ls -aph'
+alias c='cat'
 alias d='cd'
 alias e='exit'
 alias g='git'
+alias h='hg'
 alias l='ls -lph'
 alias m=$PAGER
 alias s='ls'
