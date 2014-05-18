@@ -46,3 +46,5 @@
 
 [web]
     browser = open
+[push]
+	default = simple
