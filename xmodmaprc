@@ -1,3 +1,9 @@
+! Map right Alt to Control
 remove Mod1 = Alt_R
 keysym Alt_R = Control_R
-keysym Caps_Lock = Escape
+add Control = Control_R
+
+! Map Caps lock to Control
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L

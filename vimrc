@@ -7,18 +7,24 @@
 
 " Because pasting hurts my poor fingers otherwise
 inoremap <C-R><C-R> <C-R>"
+
 " Because yy the hell not?
 nnoremap Y y$
+
 " Because L key said so
 nnoremap <space>q :q<CR>
 nnoremap <space>x :x<CR>
 nnoremap <space>w :w<CR>
 nnoremap <space>e :e<CR>
+
 " Because J key said so (and 0 concurs)
 nnoremap <CR> :
 
+" I don't think ^D has a default i mapping
+inoremap <C-D> <Esc>
+
 " Because I'm a horrible person
-cnoremap w!! w !sudo tee > /dev/null %
+cabbrev w!! w !sudo tee > /dev/null %
 
 " --------------------------------------------------------------------------------
 "  Tweaks
@@ -34,15 +40,17 @@ nnoremap zb zb4<C-E>
 set cursorline
 set nowrap " Wrapping is 4 n00bz
 set mouse="" " id.
+set encoding=utf-8 " I'm a civilized human
 set ttimeout ttimeoutlen=100 " I'm not on dialup
 set timeout timeoutlen=400 " Nor the world's fastest typist
 set noswapfile " Do u even Git!?
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set incsearch
-set cursorline
+set hlsearch
+set cursorline cursorcolumn
 set hidden
-set autoindent smartindent tabstop=2
+set autoindent cindent smartindent smarttab expandtab shiftwidth=2 tabstop=2
 
 " --------------------------------------------------------------------------------
 "  Leader Mappings
@@ -53,10 +61,12 @@ let maplocalleader = "="
 " Misc
 nnoremap <leader>tt :split .todo<cr>
 nnoremap <leader>S $zf%
+nnoremap <leader>mr :let @a=@"<cr>
 
 " Meta
 nnoremap <leader>e :edit $MYVIMRC<cr>
 nnoremap <leader>r :source $MYVIMRC<cr>
+vnoremap <leader>x "xy@x<cr>
 
 " Pluginery
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
