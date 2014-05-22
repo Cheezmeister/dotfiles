@@ -16,7 +16,7 @@ alias m=$PAGER
 alias s='ls'
 alias t='todo.sh'
 alias u='cd ..'
-alias v='vim'
+alias v=$VISUAL
 alias x='tmux -2'
 
 # Git

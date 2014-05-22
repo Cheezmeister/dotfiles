@@ -22,6 +22,7 @@ nnoremap <CR> :
 
 " I don't think ^D has a default i mapping
 inoremap <C-D> <Esc>
+inoremap <Esc> <nop>
 
 " Because I'm a horrible person
 cabbrev w!! w !sudo tee > /dev/null %
@@ -79,7 +80,7 @@ nmap <leader>sm <leader>vmake<cr>
 " Toggling things
 nnoremap <leader>tn :NERDTreeToggle<cr>
 nnoremap <leader>to :TagbarToggle<cr>
-nnoremap <leader>tl :set number!<cr>
+nnoremap <leader>tl :set number! relativenumber!<cr>
 nnoremap <leader>tp :set paste!<cr>
 nnoremap <leader>tw :set wrap!<cr>
 
