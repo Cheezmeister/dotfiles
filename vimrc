@@ -20,9 +20,7 @@ nnoremap <space>e :e<CR>
 " Because J key said so (and 0 concurs)
 nnoremap <CR> :
 
-" I don't think ^D has a default i mapping
-inoremap <C-D> <Esc>
-inoremap <Esc> <nop>
+inoremap <C-D> <nop>
 
 " Because I'm a horrible person
 cabbrev w!! w !sudo tee > /dev/null %
@@ -42,14 +40,14 @@ set cursorline
 set nowrap " Wrapping is 4 n00bz
 set mouse="" " id.
 set encoding=utf-8 " I'm a civilized human
-set ttimeout ttimeoutlen=100 " I'm not on dialup
+set ttimeout ttimeoutlen=20 " I'm not on dialup
 set timeout timeoutlen=400 " Nor the world's fastest typist
 set noswapfile " Do u even Git!?
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set incsearch
 set hlsearch
-set cursorline cursorcolumn
+set cursorline
 set hidden
 set autoindent cindent smartindent smarttab expandtab shiftwidth=2 tabstop=2
 

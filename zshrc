@@ -1,5 +1,5 @@
 # :D
-export RPROMPT="%B%F{cyan}%~%f%b | %n@%M | %B%F{green}%D{%a %b %d} %D{%I:%M:%S%P}%f%b"
+export RPROMPT="%B%F{cyan}%~%f%b | %M | %B%F{green}%D{%a %b %d} %D{%I:%M%P}%f%b"
 export PROMPT="%B%F{yellow}%l%F{blue}%1v%f %#%f%b "
 export PS1=$PROMPT
 
@@ -13,35 +13,39 @@ alias g='git'
 alias h='hg'
 alias l='ls -lph'
 alias m=$PAGER
+alias o=$OPENER
 alias s='ls'
 alias t='todo.sh'
 alias u='cd ..'
 alias v=$VISUAL
 alias x='tmux -2'
 
+# Meta
+alias rz='source ~/.zshrc'
+alias ez="$EDITOR ~/.zshrc"
+
 # Git
 alias gs='git status'
 alias gd='git diff'
 
 # Tmux
-alias ta='tmux -2 attach -t'
-alias tn='tmux -2 new-session -s'
-
-# Meta
-alias rz='source ~/.zshrc'
-alias ez="$EDITOR ~/.zshrc"
+alias xa='tmux -2 attach -t'
+alias xn='tmux -2 new-session -s'
 
 # Applications
 alias web=$WEB_BROWSER
 alias term=$TERMINAL
 alias fm='$FILE_MANAGER .'
-alias open='$OPENER'
+
+# Options
+alias grep='grep -P' # PCRE Master Race
 
 # Misc
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
 alias syc='systemctl'
 alias ssyc='sudo systemctl'
+alias psag='ps aux | grep'
 
 setopt extendedglob
 
