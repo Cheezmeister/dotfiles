@@ -1,0 +1,2 @@
+# Options
+alias grep='grep -P' # PCRE Master Race

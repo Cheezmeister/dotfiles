@@ -37,9 +37,6 @@ alias web=$WEB_BROWSER
 alias term=$TERMINAL
 alias fm='$FILE_MANAGER .'
 
-# Options
-alias grep='grep -P' # PCRE Master Race
-
 # Misc
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
