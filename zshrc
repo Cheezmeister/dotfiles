@@ -14,6 +14,7 @@ alias h='hg'
 alias l='ls -lph'
 alias m=$PAGER
 alias o=$OPENER
+alias p='grep -P'
 alias s='ls'
 alias t='todo.sh'
 alias u='cd ..'
@@ -43,7 +44,10 @@ alias targz='tar cvzf'
 alias syc='systemctl'
 alias ssyc='sudo systemctl'
 alias psag='ps aux | grep'
+alias obliterate='rm -rf'
 
+# Incremental search is friggin useful
+bindkey "^R" history-incremental-search-backward
 setopt extendedglob
 
 autoload -U compinit
