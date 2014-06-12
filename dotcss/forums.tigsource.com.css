@@ -1,0 +1,12 @@
+#wrapper {
+  width: 80%;
+}
+
+.post {
+  font-size: 140%;
+  background-color: #ccffdd;
+}
+
+.smalltext table {
+  display:none;
+}
