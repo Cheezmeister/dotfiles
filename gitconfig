@@ -11,6 +11,10 @@
     tags = tag -l
     branches = branch -a
     remotes = remote -v
+    ignore = !echo >> .gitignore
+    exclude = !echo >> .git/info/exclude
+
+    m = checkout master
 
     # Swiped from sjl
     l   = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
@@ -34,7 +38,6 @@
     cam = commit --all --message
 
     unstage = reset HEAD
-
 
     currentbranch = rev-parse --abbrev-ref HEAD
 

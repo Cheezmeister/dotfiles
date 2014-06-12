@@ -1,5 +1,6 @@
 "------------------------------------------------------------
 " BML Hackery - Here Be Dragons
+"------------------------------------------------------------
 
 " --------------------------------------------------------------------------------
 "  Dangerous things
@@ -20,7 +21,8 @@ nnoremap <space>e :e<CR>
 " Because J key said so (and 0 concurs)
 nnoremap <CR> :
 
-inoremap <C-D> <nop>
+" Because PCRE Master Race
+nnoremap g/ /\v
 
 " Because I'm a horrible person
 cabbrev w!! w !sudo tee > /dev/null %
@@ -36,9 +38,9 @@ nnoremap zb zb4<C-E>
 " --------------------------------------------------------------------------------
 " Options
 " --------------------------------------------------------------------------------
-set cursorline
-set nowrap " Wrapping is 4 n00bz
-set mouse="" " id.
+set cursorline cursorcolumn
+set nowrap
+set mouse=""
 set encoding=utf-8 " I'm a civilized human
 set ttimeout ttimeoutlen=20 " I'm not on dialup
 set timeout timeoutlen=400 " Nor the world's fastest typist
@@ -49,7 +51,14 @@ set incsearch
 set hlsearch
 set cursorline
 set hidden
-set autoindent cindent smartindent smarttab expandtab shiftwidth=2 tabstop=2
+set autoindent cindent smartindent 
+set smarttab expandtab shiftwidth=2 tabstop=2
+
+" --------------------------------------------------------------------------------
+" Style
+" --------------------------------------------------------------------------------
+highlight CursorRow cterm=NONE ctermbg=black
+highlight CursorColumn cterm=NONE ctermbg=black
 
 " --------------------------------------------------------------------------------
 "  Leader Mappings

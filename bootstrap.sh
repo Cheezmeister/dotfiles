@@ -1,3 +1,5 @@
+#!/bin/sh
+
 DOTFILES=~/stuff/dotfiles
 
 for rc in zshrc vimrc tmux.conf profile xinitrc xmodmaprc
