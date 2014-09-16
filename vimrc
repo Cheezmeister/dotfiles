@@ -12,12 +12,6 @@ inoremap <C-R><C-R> <C-R>"
 " Because yy the hell not?
 nnoremap Y y$
 
-" Because L key said so
-nnoremap <space>q :q<CR>
-nnoremap <space>x :x<CR>
-nnoremap <space>w :w<CR>
-nnoremap <space>e :e<CR>
-
 " Because J key said so (and 0 concurs)
 nnoremap <CR> :
 
@@ -28,22 +22,11 @@ nnoremap g/ /\v
 cabbrev w!! w !sudo tee > /dev/null %
 
 " --------------------------------------------------------------------------------
-"  Tweaks
-" --------------------------------------------------------------------------------
-
-" Leave 4 lines of context
-nnoremap z<CR> z<CR>4<C-Y>
-nnoremap zb zb4<C-E>
-
-" --------------------------------------------------------------------------------
 " Options
 " --------------------------------------------------------------------------------
 set cursorline cursorcolumn
 set nowrap
 set mouse=""
-set encoding=utf-8 " I'm a civilized human
-set ttimeout ttimeoutlen=20 " I'm not on dialup
-set timeout timeoutlen=400 " Nor the world's fastest typist
 set noswapfile " Do u even Git!?
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -51,11 +34,16 @@ set incsearch
 set hlsearch
 set cursorline
 set hidden
-set autoindent cindent smartindent 
-set smarttab expandtab shiftwidth=2 tabstop=2
+set autoindent cindent smartindent
+set smarttab expandtab
+set shiftwidth=2 tabstop=2
+set encoding=utf-8 " I'm a civilized human
+set ttimeout ttimeoutlen=20 " I'm not on dialup
+set timeout timeoutlen=400 " Nor the world's fastest typist
+set scrolloff=4 " Leave 4 lines of context
 
 " --------------------------------------------------------------------------------
-" Style
+" Rainbow Stylin'
 " --------------------------------------------------------------------------------
 highlight CursorRow cterm=NONE ctermbg=black
 highlight CursorColumn cterm=NONE ctermbg=black
@@ -64,7 +52,13 @@ highlight CursorColumn cterm=NONE ctermbg=black
 "  Leader Mappings
 " --------------------------------------------------------------------------------
 let mapleader = "\\"
-let maplocalleader = "="
+let maplocalleader = "\<space>"
+
+" R/W
+nnoremap <localleader>q :q<CR>
+nnoremap <localleader>x :x<CR>
+nnoremap <localleader>w :w<CR>
+nnoremap <localleader>e :e<CR>
 
 " Misc
 nnoremap <leader>tt :split .todo<cr>
@@ -80,14 +74,10 @@ vnoremap <leader>x "xy@x<cr>
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
 nnoremap <leader>b :wa<cr>:call VimuxRunLastCommand()<cr>
 
-" Shell commands
-nmap <leader>sc <leader>vctags -R .<cr>
-nmap <leader>sm <leader>vmake<cr>
-
 " Toggling things
 nnoremap <leader>tn :NERDTreeToggle<cr>
 nnoremap <leader>to :TagbarToggle<cr>
-nnoremap <leader>tl :set number! relativenumber!<cr>
+nnoremap <leader>tl :set relativenumber!<cr>
 nnoremap <leader>tp :set paste!<cr>
 nnoremap <leader>tw :set wrap!<cr>
 
