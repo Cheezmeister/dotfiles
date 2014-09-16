@@ -1,50 +1,8 @@
-# :D
-export RPROMPT="%B%F{cyan}%~%f%b | %M | %B%F{green}%D{%a %b %d} %D{%I:%M%P}%f%b"
-export PROMPT="%B%F{yellow}%l%F{blue}%1v%f %#%f%b "
-export PS1=$PROMPT
+export HISTFILE="~/.history"
+export SAVEHIST=10000
 
-# Alphabeticals
-alias @='sudo'
-alias a='ls -aph'
-alias c='cat'
-alias d='cd'
-alias e='exit'
-alias g='git'
-alias h='hg'
-alias l='ls -lph'
-alias m=$PAGER
-alias o=$OPENER
-alias p='grep -P'
-alias s='ls'
-alias t='todo.sh'
-alias u='cd ..'
-alias v=$VISUAL
-alias x='tmux -2'
-
-# Meta
-alias rz='source ~/.zshrc'
-alias ez="$EDITOR ~/.zshrc"
-
-# Git
-alias gs='git status'
-alias gd='git diff'
-
-# Tmux
-alias xa='tmux -2 attach -t'
-alias xn='tmux -2 new-session -s'
-
-# Applications
-alias web=$WEB_BROWSER
-alias term=$TERMINAL
-alias fm='$FILE_MANAGER .'
-
-# Misc
-alias untargz='tar xvzf'
-alias targz='tar cvzf'
-alias syc='systemctl'
-alias ssyc='sudo systemctl'
-alias psag='ps aux | grep'
-alias obliterate='rm -rf'
+# Aliases
+source ~/dotfiles/aliases
 
 # Incremental search is friggin useful
 bindkey "^R" history-incremental-search-backward
@@ -60,3 +18,15 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 
 # From https://gist.github.com/yagihiro/173169
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+
+# From http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats '%F{5}[%F{blue}%b%F{5}]%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+precmd () { vcs_info }
+
+# Prompt
+export RPROMPT="%B%F{cyan}%~%f%b | %M | %B%F{green}%D{%a %b %d} %D{%I:%M%P}%f%b"
+export PROMPT='%B%F{yellow}%l%F{blue}${vcs_info_msg_0_}%f%# %f%b '
+# export PS1=$PROMPT
