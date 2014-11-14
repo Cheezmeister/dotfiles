@@ -21,10 +21,6 @@ alias x='tmux -2'
 alias rz='source ~/.zshrc'
 alias ez="$EDITOR ~/.zshrc"
 
-# Git
-alias gs='git status'
-alias gd='git diff'
-
 # Tmux
 alias xa='tmux -2 attach -t'
 alias xn='tmux -2 new-session -s'
@@ -41,4 +37,5 @@ alias syc='systemctl'
 alias ssyc='sudo systemctl'
 alias psag='ps aux | grep'
 alias obliterate='rm -rf'
+alias wherewasi='cd -'
 

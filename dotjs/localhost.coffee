@@ -1,5 +1,6 @@
 # Reload after 5 sec
-window.setTimeout(( -> 
-  document.location.reload(true) 
-), 5000)
+if (document.location.searchParams.has 'reload')
+  window.setTimeout(( ->
+    document.location.reload(true)
+  ), 5000)
 

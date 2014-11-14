@@ -45,8 +45,8 @@ set scrolloff=4 " Leave 4 lines of context
 " --------------------------------------------------------------------------------
 " Rainbow Stylin'
 " --------------------------------------------------------------------------------
-highlight CursorRow cterm=NONE ctermbg=black
-highlight CursorColumn cterm=NONE ctermbg=black
+highlight CursorLine   cterm=none ctermbg=black
+highlight CursorColumn cterm=none ctermbg=black
 
 " --------------------------------------------------------------------------------
 "  Leader Mappings
