@@ -51,14 +51,14 @@ highlight CursorColumn cterm=none ctermbg=black
 " --------------------------------------------------------------------------------
 "  Leader Mappings
 " --------------------------------------------------------------------------------
-let mapleader = "\\"
-let maplocalleader = "\<space>"
+let mapleader = "\<space>"
+let maplocalleader = "\\"
 
 " R/W
-nnoremap <localleader>q :q<CR>
-nnoremap <localleader>x :x<CR>
-nnoremap <localleader>w :w<CR>
-nnoremap <localleader>e :e<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>x :x<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>e :e<CR>
 
 " Misc
 nnoremap <leader>tt :split .todo<cr>
@@ -66,9 +66,9 @@ nnoremap <leader>S $zf%
 nnoremap <leader>mr :let @a=@"<cr>
 
 " Meta
-nnoremap <leader>e :edit $MYVIMRC<cr>
-nnoremap <leader>r :source $MYVIMRC<cr>
-vnoremap <leader>x "xy@x<cr>
+nnoremap <leader>me :edit $MYVIMRC<cr>
+nnoremap <leader>mr :source $MYVIMRC<cr>
+vnoremap <leader>mx "xy@x<cr>
 
 " Pluginery
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
