@@ -1,13 +1,14 @@
 
 # Alphabeticals
 alias @='sudo'
-alias a='ls -aph'
+alias _='PATH=/usr/local/bin:~/bin:$PATH'
+alias a='ls -alph'
 alias c='cat'
 alias d='cd'
 alias e='exit'
 alias g='git'
 alias h='hg'
-alias l='ls -lph'
+alias l="clear; r"
 alias m=$PAGER
 alias o=$OPENER
 alias p='grep -P'

@@ -1,4 +1,4 @@
-export HISTFILE="~/.history"
+export HISTFILE="$HOME/.history"
 export SAVEHIST=10000
 
 # Aliases
@@ -28,5 +28,5 @@ precmd () { vcs_info }
 
 # Prompt
 export RPROMPT="%B%F{cyan}%~%f%b | %M | %B%F{green}%D{%a %b %d} %D{%I:%M%P}%f%b"
-export PROMPT='%B%F{yellow}%l%F{blue}${vcs_info_msg_0_}%f%# %f%b '
-# export PS1=$PROMPT
+export PROMPT="%B%F{yellow}%l%f%F{blue}${vcs_info_msg_0_}%f%# %f%b"
+export PS1=$PROMPT
