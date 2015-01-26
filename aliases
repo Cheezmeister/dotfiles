@@ -16,6 +16,7 @@ alias t='todo.sh'
 alias u='cd ..'
 alias v=$VISUAL
 alias x='tmux -2'
+alias z='7z'
 
 # Meta
 alias rz='source ~/.zshrc'
@@ -33,9 +34,8 @@ alias fm='$FILE_MANAGER .'
 # Misc
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
-alias syc='systemctl'
-alias ssyc='sudo systemctl'
 alias psag='ps aux | grep'
 alias obliterate='rm -rf'
 alias wherewasi='cd -'
+alias script-that-please='echo !! >'
 

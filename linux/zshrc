@@ -1,2 +1,4 @@
 # Options
 alias grep='grep -P' # PCRE Master Race
+alias syc='systemctl'
+alias ssyc='sudo systemctl'
