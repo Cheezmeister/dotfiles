@@ -77,6 +77,7 @@ nnoremap <leader>b :wa<cr>:call VimuxRunLastCommand()<cr>
 " Toggling things
 nnoremap <leader>tn :NERDTreeToggle<cr>
 nnoremap <leader>to :TagbarToggle<cr>
+nnoremap <leader>tr :RainbowParenthesesToggle<cr>
 nnoremap <leader>tl :set relativenumber!<cr>
 nnoremap <leader>tp :set paste!<cr>
 nnoremap <leader>tw :set wrap!<cr>
