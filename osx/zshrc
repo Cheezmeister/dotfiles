@@ -2,4 +2,4 @@ export CLICOLOR=1
 alias iwant='brew install'
 alias wtfis='brew search'
 alias inventory='brew list'
-alias updateallthethings='brew update'
+alias updateallthethings='brew update && brew upgrade'

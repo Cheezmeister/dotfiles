@@ -35,9 +35,8 @@ alias fm='$FILE_MANAGER .'
 # Misc
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
-alias syc='systemctl'
-alias ssyc='sudo systemctl'
 alias psag='ps aux | grep'
 alias obliterate='rm -rf'
 alias wherewasi='cd -'
+alias script-that-please='echo !! >'
 
