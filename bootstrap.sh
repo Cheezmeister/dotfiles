@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOTFILES=~/stuff/dotfiles
+DOTFILES=~/dotfiles
 
 for rc in zshrc vimrc tmux.conf profile xinitrc xmodmaprc bashrc
 do
