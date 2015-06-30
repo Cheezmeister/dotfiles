@@ -3,6 +3,7 @@
 alias @='sudo'
 alias _='PATH=/usr/local/bin:~/bin:$PATH'
 alias a='ls -alph'
+alias b='~/bin/just_bloody_build_it.pl'
 alias c='cat'
 alias d='cd'
 alias e='exit'
@@ -39,4 +40,7 @@ alias psag='ps aux | grep'
 alias obliterate='rm -rf'
 alias wherewasi='cd -'
 alias script-that-please='echo !! >'
-
+alias latex2pdf='pdflatex' # Come on, guys.
+alias ineed='sudo npm install -g'
+alias gimme='sudo gem install'
+alias precious='sudo pip install'
