@@ -1,8 +1,16 @@
 #!/bin/sh
 
-DOTFILES=~/dotfiles
+export DOTFILES=$PWD
+echo >> profile "export DOTFILES=$PWD"
 
-for rc in zshrc vimrc tmux.conf profile xinitrc xmodmaprc bashrc
+echo "Dotfiles dir set to $DOTFILES"
+
+
+echo >> ~/.gitconfig "[include]"
+echo >> ~/.gitconfig "    path = $DOTFILES/gitconfig"
+exit
+
+for rc in abcde.conf zshrc vimrc tmux.conf profile zprofile xinitrc xmodmaprc bashrc
 do
   if [ ! -e $DOTFILES/$rc ]; then 
     continue 
@@ -12,7 +20,3 @@ do
   echo "$rc patched."
 done
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle
-curl -Sso ~/.vim/autoload/pathogen.vim \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim 
-echo "Pathogen installed."
