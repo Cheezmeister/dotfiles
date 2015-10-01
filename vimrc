@@ -7,10 +7,6 @@
 "  (These override default behaviour)
 " --------------------------------------------------------------------------------
 
-" Because pasting hurts my poor fingers otherwise
-inoremap <C-R>' <C-R>"
-cnoremap <C-R>' <C-R>"
-
 " Because yy the hell not?
 nnoremap Y y$
 
@@ -26,8 +22,24 @@ nnoremap g/ /\v
 " Because Tab key wants to feel useful
 nnoremap - <C-O>
 
+" --------------------------------------------------------------------------------
+"  Less Dangerous things
+" --------------------------------------------------------------------------------
+
+" Because pasting hurts my poor fingers otherwise
+inoremap <C-R>' <C-R>"
+cnoremap <C-R>' <C-R>"
+inoremap <C-R>; <C-R>:
+cnoremap <C-R>; <C-R>:
+
 " Because I'm a horrible person
 cabbrev w!! w !sudo tee > /dev/null %
+
+" Because splits yo
+cabbrev vsb vs \| b
+
+" Because sometimes it's all about the code
+nnoremap <BS> :call VimuxCloseRunner() \| NERDTreeClose \| TagbarClose<CR>
 
 " --------------------------------------------------------------------------------
 " Options
@@ -49,6 +61,7 @@ set encoding=utf-8 " I'm a civilized human
 set ttimeout ttimeoutlen=20 " I'm not on dialup
 set timeout timeoutlen=400 " Nor the world's fastest typist
 set scrolloff=4 " Leave 4 lines of context
+set autoread
 
 " --------------------------------------------------------------------------------
 " Rainbow Stylin'
@@ -89,6 +102,10 @@ nnoremap <leader>tr :RainbowParenthesesToggle<cr>
 nnoremap <leader>tl :set relativenumber!<cr>
 nnoremap <leader>tp :set paste!<cr>
 nnoremap <leader>tw :set wrap!<cr>
+
+" Miscellany
+nnoremap <Leader>] :tag<space>
+
 
 " --------------------------------------------------------------------------------
 "  Misc

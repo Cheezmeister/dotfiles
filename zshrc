@@ -3,6 +3,8 @@ export SAVEHIST=10000
 
 # Aliases
 source ~/dotfiles/aliases
+alias -g px='| xargs'
+alias -g pg='| grep'
 
 # Incremental search is friggin useful
 bindkey "^R" history-incremental-search-backward
@@ -24,7 +26,7 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
 zstyle ':vcs_info:*' formats '%F{5}[%F{blue}%b%F{5}]%f '
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
-precmd () { vcs_info }
+precmd() { vcs_info }
 
 # Prompt
 export RPROMPT="%B%F{cyan}%~%f%b | %B%F{green}$USER@%M%f%b"
