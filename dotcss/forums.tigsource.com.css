@@ -4,9 +4,24 @@
 
 .post {
   font-size: 140%;
-  background-color: #ccffdd;
+  background-color: #ddffdd;
+  border: 1px solid #bbbbff;
+  border-radius: 5px;
+  padding: 2px;
 }
 
+.signature img {
+  display: none; /* I don't dig 500px signatures on one-line posts. */
+}
+
+.smalltext {
+  text-align: right;
+  margin-top: -15px;
+}
+.smalltext .signature {
+  text-align: left;
+  margin-top: 0px;
+}
 .smalltext table {
   display:none;
 }
