@@ -108,12 +108,7 @@ nnoremap <Leader>] :tag<space>
 
 
 " --------------------------------------------------------------------------------
-"  Misc
+"  Plugins
 " --------------------------------------------------------------------------------
-
-" Place Swap files here
-set directory=~/tmp,/var/tmp,/tmp
-
-" Fire up Pathogen, load plugins
-call pathogen#infect()
+source plugins.vimrc
 
