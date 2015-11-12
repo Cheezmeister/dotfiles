@@ -1,0 +1,4 @@
+alias iwant='sudo apt-get install'
+alias wtfis='apt-cache search'
+alias updateallthethings='sudo apt-get update && sudo apt-get upgrade'
+alias inventory='grep " install " /var/log/dpkg.log | cut -d " " -f 4'
