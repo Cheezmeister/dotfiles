@@ -2,3 +2,4 @@
 alias grep='grep -P' # PCRE Master Race
 alias syc='systemctl'
 alias ssyc='sudo systemctl'
+alias ls='ls --color'

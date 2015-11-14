@@ -1,15 +1,16 @@
 #!/bin/sh
 
-export DOTFILES=$PWD
-echo >> profile "export DOTFILES=$PWD"
 
+# Where did we check out?
+export DOTFILES=`dirname $0`
+echo >> profile "export DOTFILES=$DOTFILES"
 echo "Dotfiles dir set to $DOTFILES"
 
-
+# Git is all special.
 echo >> ~/.gitconfig "[include]"
 echo >> ~/.gitconfig "    path = $DOTFILES/gitconfig"
-exit
 
+# Errything else uses "source" like good citizens.
 for rc in abcde.conf zshrc vimrc tmux.conf profile zprofile xinitrc xmodmaprc bashrc
 do
   if [ ! -e $DOTFILES/$rc ]; then 
