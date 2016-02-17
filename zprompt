@@ -1,8 +1,20 @@
+# From http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats '%F{5}[%F{blue}%b%F{5}]%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+precmd() { vcs_info }
+
+setopt prompt_subst
+
 who='%B%F{green}%n%f%b'
 what='%F{magenta}%M%f'
 wheere='%B%F{cyan}%~%f%b'
 how='%B%F{yellow}%l%f'
-export PROMPT="$who at $what in $wheere via $how
+branch='%F{blue}\$(_git_prompt_info)%f'
+os='%F{red}$(uname)%f'
+export PROMPT="$who at $what by $how under $os in $wheere on $vcs_info_msg_0_
 %# "
 export RPROMPT="👁♥合気道"
 export PS1=$PROMPT
+export RPS1=$RPROMPT

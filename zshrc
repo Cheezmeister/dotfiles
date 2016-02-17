@@ -20,12 +20,5 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 # From https://gist.github.com/yagihiro/173169
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
-# From http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-zstyle ':vcs_info:*' formats '%F{5}[%F{blue}%b%F{5}]%f '
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
-precmd() { vcs_info }
-
 # Prompt
 source ~/dotfiles/zprompt
