@@ -1,0 +1,8 @@
+who='%B%F{green}%n%f%b'
+what='%F{magenta}%M%f'
+wheere='%B%F{cyan}%~%f%b'
+how='%B%F{yellow}%l%f'
+export PROMPT="$who at $what in $wheere via $how
+%# "
+export RPROMPT="👁♥合気道"
+export PS1=$PROMPT

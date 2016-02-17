@@ -2,7 +2,6 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=10000
 
 # Aliases
-source ~/dotfiles/aliases
 alias -g px='| xargs'
 alias -g pg='| grep'
 
@@ -29,6 +28,4 @@ zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 precmd() { vcs_info }
 
 # Prompt
-export RPROMPT="%B%F{cyan}%~%f%b | %B%F{green}$USER@%M%f%b"
-export PROMPT="%B%F{yellow}%l%f%F{blue}${vcs_info_msg_0_}%f%# %f%b"
-export PS1=$PROMPT
+source ~/dotfiles/zprompt
