@@ -9,12 +9,13 @@ setopt prompt_subst
 
 who='%B%F{green}%n%f%b'
 what='%F{magenta}%M%f'
-wheere='%B%F{cyan}%~%f%b'
+whither='%B%F{cyan}%~%f%b'
 how='%B%F{yellow}%l%f'
 branch='%F{blue}\$(_git_prompt_info)%f'
 os='%F{red}$(uname)%f'
-export PROMPT="$who at $what by $how under $os in $wheere on $vcs_info_msg_0_
+export PROMPT="
+$who at $what by $how under $os in $whither
 %# "
-export RPROMPT="👁♥合気道"
+export RPROMPT='$vcs_info_msg_0_ 合気道'
 export PS1=$PROMPT
 export RPS1=$RPROMPT
