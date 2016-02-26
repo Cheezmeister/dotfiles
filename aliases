@@ -24,10 +24,6 @@ alias z='7z'
 alias rz='source ~/.zshrc'
 alias ez="$EDITOR ~/.zshrc"
 
-# Tmux
-alias xa='tmux -2 attach -t'
-alias xn='tmux -2 new-session -s'
-
 # Applications
 alias web=$WEB_BROWSER
 alias term=$TERMINAL
