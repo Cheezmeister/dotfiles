@@ -18,11 +18,15 @@
 
     m = checkout master
     s = status
-    a = add
     sh = stash
     co = checkout
     id = rev-parse
-    pp = !git pull --rebase && git push
+
+    a = add
+      au = add --update
+
+    p = pull
+      pp = !git pull --rebase && git push
 
     # Swiped from sjl
     l   = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
