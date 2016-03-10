@@ -33,8 +33,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
-
+Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
+
 Plug 'kchmck/vim-coffee-script'
 Plug 'mctenshi/vim-literate-coffeescript'
 Plug 'wavded/vim-stylus'
