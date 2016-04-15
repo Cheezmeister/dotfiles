@@ -100,6 +100,7 @@ nnoremap <leader>lt :split ~/.todo<cr>
 nnoremap <leader>ll :split .todo<cr>
 
 " Toggling things
+nnoremap <leader>ta :AirlineToggle<cr>
 nnoremap <leader>tn :NERDTreeToggle<cr>
 nnoremap <leader>to :TagbarToggle<cr>
 nnoremap <leader>tr :RainbowParenthesesToggle<cr>
@@ -109,9 +110,3 @@ nnoremap <leader>tw :set wrap!<cr>
 
 " Miscellany
 nnoremap <Leader>] :tag<space>
-
-
-" --------------------------------------------------------------------------------
-"  Plugins
-" --------------------------------------------------------------------------------
-source ~/dotfiles/plugins.vimrc

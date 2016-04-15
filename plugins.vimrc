@@ -35,10 +35,13 @@ Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
+Plug 'xolox/vim-misc' 
+Plug 'xolox/vim-easytags', { 'for': 'cpp' }
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'mctenshi/vim-literate-coffeescript'
 Plug 'wavded/vim-stylus'
 Plug 'digitaltoad/vim-jade'
+Plug 'wting/rust.vim'
 
 call plug#end()
