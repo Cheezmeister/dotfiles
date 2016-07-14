@@ -1,7 +1,7 @@
 export HISTFILE="$HOME/.history"
 export SAVEHIST=10000
 
-# Aliases
+# Global Aliases
 alias -g px='| xargs'
 alias -g pg='| grep'
 
@@ -9,8 +9,10 @@ alias -g pg='| grep'
 bindkey "^R" history-incremental-search-backward
 setopt extendedglob
 
+# Completions
 autoload -U compinit
 compinit
+compdef '__tmux-sessions' ecks.pl # For http://luchenlabs.com/lp/ecks
 
 # From http://bit.ly/Nuqs2R
 ## case-insensitive (all),partial-word and then substring completion

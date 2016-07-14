@@ -40,3 +40,4 @@ alias latex2pdf='pdflatex' # Come on, guys.
 alias ineed='sudo npm install -g'
 alias gimme='sudo gem install'
 alias precious='sudo pip install'
+alias up='vagrant up && vagrant ssh'
