@@ -2,7 +2,7 @@
 
 
 # Where did we check out?
-export DOTFILES=`dirname $0`
+export DOTFILES=`dirname $(readlink -f $0)`
 echo >> profile "export DOTFILES=$DOTFILES"
 echo "Dotfiles dir set to $DOTFILES"
 
