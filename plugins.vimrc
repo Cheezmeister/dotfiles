@@ -18,9 +18,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/unite.vim'
-Plug 'SirVer/ultisnips'
+" TODO Python Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
-Plug 'bling/vim-airline.git'
+Plug 'bling/vim-airline'
 Plug 'freitass/todo.txt-vim'
 Plug 'honza/vim-snippets'
 Plug 'kien/rainbow_parentheses.vim/'

@@ -45,14 +45,10 @@ nnoremap <BS> :call VimuxCloseRunner() \| NERDTreeClose \| TagbarClose<CR>
 " Options
 " --------------------------------------------------------------------------------
 set cursorline cursorcolumn
-set nowrap
-set mouse=""
 set noswapfile " Do u even Git!?
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set incsearch
 set hlsearch
-set cursorline
 set hidden
 set autoindent cindent smartindent
 set smarttab expandtab
@@ -62,6 +58,9 @@ set ttimeout ttimeoutlen=20 " I'm not on dialup
 set timeout timeoutlen=400 " Nor the world's fastest typist
 set scrolloff=4 " Leave 4 lines of context
 set autoread
+
+filetype plugin on
+syntax on
 
 " --------------------------------------------------------------------------------
 " Rainbow Stylin'
@@ -106,9 +105,4 @@ nnoremap <leader>tw :set wrap!<cr>
 " Miscellany
 nnoremap <Leader>] :tag<space>
 
-
-" --------------------------------------------------------------------------------
-"  Plugins
-" --------------------------------------------------------------------------------
-source plugins.vimrc
 
