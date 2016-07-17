@@ -1,4 +1,4 @@
-"------------------------------------------------------------
+
 " BML Hackery - Here Be Dragons
 "------------------------------------------------------------
 
@@ -29,8 +29,10 @@ nnoremap - <C-O>
 " Because pasting hurts my poor fingers otherwise
 inoremap <C-R>' <C-R>"
 cnoremap <C-R>' <C-R>"
+nnoremap @' @"
 inoremap <C-R>; <C-R>:
 cnoremap <C-R>; <C-R>:
+nnoremap @; @:
 
 " Because I'm a horrible person
 cabbrev w!! w !sudo tee > /dev/null %
@@ -39,7 +41,7 @@ cabbrev w!! w !sudo tee > /dev/null %
 cabbrev vsb vs \| b
 
 " Because sometimes it's all about the code
-nnoremap <BS> :call VimuxCloseRunner() \| NERDTreeClose \| TagbarClose<CR>
+nnoremap <BS> :cclose \| :call VimuxCloseRunner() \| NERDTreeClose \| TagbarClose<CR>
 
 " --------------------------------------------------------------------------------
 " Options
@@ -58,7 +60,9 @@ set ttimeout ttimeoutlen=20 " I'm not on dialup
 set timeout timeoutlen=400 " Nor the world's fastest typist
 set scrolloff=4 " Leave 4 lines of context
 set autoread
-
+filetype plugin on
+syntax on " Duh.
+ 
 filetype plugin on
 syntax on
 
@@ -88,6 +92,7 @@ vnoremap <leader>mx "xy@x<cr>
 
 " Pluginery
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
+nnoremap <leader>d :Dispatch<space>
 nnoremap <leader>b :wa<cr>:call VimuxRunLastCommand()<cr>
 
 " Todo lists
@@ -95,6 +100,7 @@ nnoremap <leader>lt :split ~/.todo<cr>
 nnoremap <leader>ll :split .todo<cr>
 
 " Toggling things
+nnoremap <leader>ta :AirlineToggle<cr>
 nnoremap <leader>tn :NERDTreeToggle<cr>
 nnoremap <leader>to :TagbarToggle<cr>
 nnoremap <leader>tr :RainbowParenthesesToggle<cr>
@@ -104,5 +110,3 @@ nnoremap <leader>tw :set wrap!<cr>
 
 " Miscellany
 nnoremap <Leader>] :tag<space>
-
-

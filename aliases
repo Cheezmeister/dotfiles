@@ -17,16 +17,12 @@ alias s='ls'
 alias t='todo.sh'
 alias u='cd ..'
 alias v=$VISUAL
-alias x='tmux -2'
+alias x='ecks.pl'
 alias z='7z'
 
 # Meta
 alias rz='source ~/.zshrc'
 alias ez="$EDITOR ~/.zshrc"
-
-# Tmux
-alias xa='tmux -2 attach -t'
-alias xn='tmux -2 new-session -s'
 
 # Applications
 alias web=$WEB_BROWSER
@@ -44,3 +40,4 @@ alias latex2pdf='pdflatex' # Come on, guys.
 alias ineed='sudo npm install -g'
 alias gimme='sudo gem install'
 alias precious='sudo pip install'
+alias up='vagrant up && vagrant ssh'
