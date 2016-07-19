@@ -3,7 +3,7 @@
 
 # Where did we check out?
 export DOTFILES=`dirname $(readlink -f $0)`
-echo >> profile "export DOTFILES=$DOTFILES"
+echo >> $DOTFILES/profile "export DOTFILES=$DOTFILES"
 echo "Dotfiles dir set to $DOTFILES"
 
 # Git is all special.
