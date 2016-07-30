@@ -6,10 +6,10 @@ precmd() { vcs_info }
 
 setopt prompt_subst
 
-who='%B%F{green}%n%f%b'
+who='%F{green}%n%f'
 what='%F{magenta}%M%f'
-whither='%B%F{cyan}%~%f%b'
-how='%B%F{yellow}%l%f'
+whither='%F{cyan}%~%f'
+how='%F{yellow}%l%f'
 os='%F{red}$(uname)%f'
 export PROMPT="
 $who at $what by $how under $os in $whither

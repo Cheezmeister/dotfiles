@@ -20,6 +20,8 @@ alias v=$VISUAL
 alias x='ecks.pl'
 alias z='7z'
 
+alias G='gee.pl'
+
 # Meta
 alias rz='source ~/.zshrc'
 alias ez="$EDITOR ~/.zshrc"
