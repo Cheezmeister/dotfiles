@@ -43,5 +43,6 @@ Plug 'mctenshi/vim-literate-coffeescript'
 Plug 'wavded/vim-stylus'
 Plug 'digitaltoad/vim-jade'
 Plug 'wting/rust.vim'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
