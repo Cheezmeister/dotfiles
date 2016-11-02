@@ -18,7 +18,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Shougo/unite.vim'
-Plug 'SirVer/ultisnips'
+" TODO Python Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'bling/vim-airline'
 Plug 'freitass/todo.txt-vim'
@@ -43,5 +43,6 @@ Plug 'mctenshi/vim-literate-coffeescript'
 Plug 'wavded/vim-stylus'
 Plug 'digitaltoad/vim-jade'
 Plug 'wting/rust.vim'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()

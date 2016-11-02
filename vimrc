@@ -47,13 +47,10 @@ nnoremap <BS> :cclose \| :call VimuxCloseRunner() \| NERDTreeClose \| TagbarClos
 " Options
 " --------------------------------------------------------------------------------
 set cursorline cursorcolumn
-set nowrap
-set mouse=""
 set noswapfile " Do u even Git!?
 set omnifunc=syntaxcomplete#Complete
 set incsearch
 set hlsearch
-set cursorline
 set hidden
 set autoindent cindent smartindent
 set smarttab expandtab
@@ -66,6 +63,9 @@ set autoread
 filetype plugin on
 syntax on " Duh.
  
+filetype plugin on
+syntax on
+
 " --------------------------------------------------------------------------------
 " Rainbow Stylin'
 " --------------------------------------------------------------------------------

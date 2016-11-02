@@ -24,3 +24,6 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 
 # Prompt
 source ~/dotfiles/zprompt
+
+# Aliases
+source ~/dotfiles/aliases

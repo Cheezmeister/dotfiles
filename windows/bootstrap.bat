@@ -1,3 +1,3 @@
-mklink /D %userprofile%\__js ..\dotjs
-mklink /D %userprofile%\__css ..\dotcss
+mklink /D %userprofile%\js ..\dotjs
+mklink /D %userprofile%\css ..\dotcss
 pause

@@ -1,7 +1,3 @@
-! Map right Alt to Escape
-remove Mod1 = Alt_R
-keysym Alt_R = Escape
-
 ! Map Caps lock to Control
 remove Lock = Caps_Lock
 keysym Caps_Lock = Control_L
