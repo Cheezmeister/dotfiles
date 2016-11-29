@@ -17,11 +17,9 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'PeterRincker/vim-argumentative'
-Plug 'Shougo/unite.vim'
-" TODO Python Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'bling/vim-airline'
-Plug 'freitass/todo.txt-vim'
 Plug 'honza/vim-snippets'
 Plug 'kien/rainbow_parentheses.vim/'
 Plug 'majutsushi/tagbar'
@@ -35,14 +33,18 @@ Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
-Plug 'xolox/vim-misc' 
+Plug 'xolox/vim-misc', { 'for': 'cpp' } 
 Plug 'xolox/vim-easytags', { 'for': 'cpp' }
-
-Plug 'kchmck/vim-coffee-script'
-Plug 'mctenshi/vim-literate-coffeescript'
-Plug 'wavded/vim-stylus'
-Plug 'digitaltoad/vim-jade'
-Plug 'wting/rust.vim'
 Plug 'altercation/vim-colors-solarized'
+
+" Language packs turned on as needed
+" Plug 'freitass/todo.txt-vim'
+" Plug 'kchmck/vim-coffee-script'
+" Plug 'mctenshi/vim-literate-coffeescript'
+" Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+" Plug 'digitaltoad/vim-jade'
+" Plug 'elixir-lang/vim-elixir'
+" Plug 'slime-lang/vim-slime'
+" Plug 'wting/rust.vim'
 
 call plug#end()

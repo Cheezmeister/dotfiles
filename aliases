@@ -19,12 +19,13 @@ alias u='cd ..'
 alias v=$VISUAL
 alias x='ecks.pl'
 alias z='7z'
+alias G='gee.pl'
 
 alias G='gee.pl'
 
 # Meta
 alias rz='source ~/.zshrc'
-alias ez="$EDITOR ~/.zshrc"
+alias ez='$EDITOR ~/.zshrc'
 
 # Applications
 alias web=$WEB_BROWSER
@@ -36,6 +37,7 @@ alias untargz='tar xvzf'
 alias targz='tar cvzf'
 alias psag='ps aux | grep'
 alias obliterate='rm -rf'
+alias aremaref='rm -rf'
 alias wherewasi='cd -'
 alias script-that-please='echo !! >'
 alias latex2pdf='pdflatex' # Come on, guys.
@@ -43,3 +45,4 @@ alias ineed='sudo npm install -g'
 alias gimme='sudo gem install'
 alias precious='sudo pip install'
 alias up='vagrant up && vagrant ssh'
+alias nonotherecmake='rm -rf CMakeCache.txt CMakeFiles CPackConfig.cmake CPackSourceConfig.cmake Makefile cmake_install.cmake'

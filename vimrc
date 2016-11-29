@@ -37,11 +37,17 @@ nnoremap @; @:
 " Because I'm a horrible person
 cabbrev w!! w !sudo tee > /dev/null %
 
-" Because splits yo
 cabbrev vsb vs \| b
+cabbrev cmlt CMakeLists.txt
 
 " Because sometimes it's all about the code
 nnoremap <BS> :cclose \| :call VimuxCloseRunner() \| NERDTreeClose \| TagbarClose<CR>
+
+" --------------------------------------------------------------------------------
+" Abbreviations
+" --------------------------------------------------------------------------------
+iabbrev yolo ¯\_(ツ)_/¯
+
 
 " --------------------------------------------------------------------------------
 " Options
@@ -61,6 +67,7 @@ set timeout timeoutlen=400 " Nor the world's fastest typist
 set scrolloff=4 " Leave 4 lines of context
 set autoread
 filetype plugin on
+filetype plugin indent on
 syntax on " Duh.
  
 filetype plugin on
@@ -94,6 +101,7 @@ vnoremap <leader>mx "xy@x<cr>
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
 nnoremap <leader>d :Dispatch<space>
 nnoremap <leader>b :wa<cr>:call VimuxRunLastCommand()<cr>
+nnoremap <leader>g :Ag <C-R><C-W>
 
 " Todo lists
 nnoremap <leader>lt :split ~/.todo<cr>
