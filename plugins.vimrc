@@ -36,6 +36,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'xolox/vim-misc', { 'for': 'cpp' } 
 Plug 'xolox/vim-easytags', { 'for': 'cpp' }
 Plug 'altercation/vim-colors-solarized'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 
 " Language packs turned on as needed
 " Plug 'freitass/todo.txt-vim'
