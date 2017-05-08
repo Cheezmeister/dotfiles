@@ -11,9 +11,11 @@ echo >> ~/.gitconfig "[include]"
 echo >> ~/.gitconfig "    path = $DOTFILES/gitconfig"
 
 # Errything else uses "source" like good citizens.
-for rc in abcde.conf zshrc vimrc tmux.conf profile zprofile xinitrc xmodmaprc bashrc; do
-  if [ -e $DOTFILES/$rc ]; then 
-    echo >> ~/.$rc source $DOTFILES/$rc || echo "Couldn't patch $rc: $?"
-    echo "$rc patched."
+for dotfile in abcde.conf zshrc vimrc tmux.conf profile zshenv zprofile xinitrc xmodmaprc bashrc; do
+  if [ -e $DOTFILES/$dotfile ]; then 
+    echo >> ~/.$dotfile source $DOTFILES/$dotfile || echo "Couldn't patch $dotfile: $?"
+    echo "$dotfile patched."
   fi
 done
+
+mkdir -p bin && curl http://luchenlabs.com/lp/ecks.pl > bin/ecks.pl && chmod +x bin/ecks.pl
