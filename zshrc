@@ -5,6 +5,19 @@ export SAVEHIST=10000
 alias -g px='| xargs'
 alias -g pg='| grep'
 
+
+# Expand aliases as I type
+globalias() {
+   zle _expand_alias
+   zle expand-word
+   zle self-insert
+}
+zle -N globalias
+bindkey " " globalias
+bindkey "^ " magic-space           # control-space to bypass completion
+bindkey -M isearch " " magic-space # normal space during searches
+
+
 # Incremental search is friggin useful
 bindkey "^R" history-incremental-search-backward
 setopt extendedglob
@@ -23,7 +36,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
 # Prompt
-source ~/dotfiles/zprompt
+source $DOTFILES/zprompt
 
 # Aliases
-source ~/dotfiles/aliases
+source $DOTFILES/aliases

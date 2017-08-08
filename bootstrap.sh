@@ -6,9 +6,8 @@ export DOTFILES=`dirname $(readlink -f $0)`
 echo >> $DOTFILES/profile "export DOTFILES=$DOTFILES"
 echo "Dotfiles dir set to $DOTFILES"
 
-# Git is all special.
-echo >> ~/.gitconfig "[include]"
-echo >> ~/.gitconfig "    path = $DOTFILES/gitconfig"
+# Git Config must be symlinked
+ln -s $DOTFILES/gitconfig ~/.gitconfig
 
 # Errything else uses "source" like good citizens.
 for dotfile in abcde.conf zshrc vimrc tmux.conf profile zshenv zprofile xinitrc xmodmaprc bashrc; do
