@@ -11,7 +11,7 @@
 nnoremap Y y$
 
 " Because J key said so (and 0 concurs)
-nnoremap <CR> :
+nnoremap <Enter> :
 
 " Because J key said so again!
 cabbrev j jumps
@@ -41,12 +41,13 @@ cabbrev vsb vs \| b
 cabbrev cmlt CMakeLists.txt
 
 " Because sometimes it's all about the code
-nnoremap <BS> :cclose \| :call VimuxCloseRunner() \| NERDTreeClose \| TagbarClose<CR>
+nnoremap <Backspace> :helpclose \| cclose \| call VimuxCloseRunner() \| NERDTreeClose \| TagbarClose<CR>
 
 " --------------------------------------------------------------------------------
 " Abbreviations
 " --------------------------------------------------------------------------------
 iabbrev yolo ¯\_(ツ)_/¯
+iabbrev bml Brendan Luchen
 
 
 " --------------------------------------------------------------------------------
@@ -64,7 +65,7 @@ set shiftwidth=2 tabstop=2
 set encoding=utf-8 " I'm a civilized human
 set ttimeout ttimeoutlen=20 " I'm not on dialup
 set timeout timeoutlen=400 " Nor the world's fastest typist
-set scrolloff=4 " Leave 4 lines of context
+set scrolloff=4
 set autoread
 filetype plugin on
 filetype plugin indent on
@@ -107,6 +108,9 @@ nnoremap <leader>g :Ag <C-R><C-W>
 nnoremap <leader>lt :split ~/.todo<cr>
 nnoremap <leader>ll :split .todo<cr>
 
+" Inspections
+nnoremap <leader>if :ALEFix<cr>
+
 " Toggling things
 nnoremap <leader>ta :AirlineToggle<cr>
 nnoremap <leader>tn :NERDTreeToggle<cr>
@@ -115,6 +119,7 @@ nnoremap <leader>tr :RainbowParenthesesToggle<cr>
 nnoremap <leader>tl :set number! relativenumber!<cr>
 nnoremap <leader>tp :set paste!<cr>
 nnoremap <leader>tw :set wrap!<cr>
+nnoremap <leader>ti :ALEToggle<cr>
 
 " Miscellany
 nnoremap <Leader>] :tag<space>

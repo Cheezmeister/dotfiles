@@ -16,6 +16,8 @@
     unstage = reset HEAD
     currentbranch = rev-parse --abbrev-ref HEAD
     bloody-hell-just-do-the-thing = branch --set-upstream-to=origin/master master
+    push-new-branch = !git push --set-upstream origin $(git currentbranch)
+    delete-branch = branch -d
 
     m = checkout master
     s = status
@@ -26,17 +28,23 @@
     a = add
       au = add --update
 
+    b = branch
+
     p = pull
       pp = !git pull --rebase && git push
 
+    u = pull upstream master
+
     # Swiped from sjl
-    l   = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
-      ll  = log     --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
-      gl  = log -12 --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(by %an)%Creset%C(yellow bold)%d%Creset%n'
-      gll = log     --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(%cr by %an)%Creset%C(yellow bold)%d%Creset%n'
+    l   = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an %Cblue%ar%Creset)%Creset'
+      ll  = log     --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an %Cblue%ar%Creset)%Creset'
+      gl  = log -12 --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(by %an %Cblue%ar%Creset)%Creset%C(yellow bold)%d%Creset%n'
+      gll = log     --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(%cr by %an %Cblue%ar%Creset)%Creset%C(yellow bold)%d%Creset%n'
 
     d = diff
       ds = diff --staged
+      df = diff --diff-filter
+      dsf = diff --staged --diff-filter
 
     c = commit
       cm = commit -m

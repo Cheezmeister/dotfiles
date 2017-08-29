@@ -7,8 +7,9 @@ alias b='~/bin/just_bloody_build_it.pl'
 alias c='cat'
 alias d='cd'
 alias e='exit'
+alias f='file'
 alias g='git'
-alias h='hg'
+alias h='hub'
 alias l="clear; r"
 alias m=$PAGER
 alias o=$OPENER
@@ -19,8 +20,6 @@ alias u='cd ..'
 alias v=$VISUAL
 alias x='ecks.pl'
 alias z='7z'
-alias G='gee.pl'
-
 alias G='gee.pl'
 
 # Meta

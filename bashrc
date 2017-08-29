@@ -1,2 +1,2 @@
 # Aliases
-source ~/dotfiles/aliases
+source $DOTFILES/aliases
