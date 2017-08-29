@@ -116,7 +116,7 @@ nnoremap <leader>ta :AirlineToggle<cr>
 nnoremap <leader>tn :NERDTreeToggle<cr>
 nnoremap <leader>to :TagbarToggle<cr>
 nnoremap <leader>tr :RainbowParenthesesToggle<cr>
-nnoremap <leader>tl :set number! relativenumber!<cr>
+nnoremap <leader>tl :set number! relativenumber! list!<cr>
 nnoremap <leader>tp :set paste!<cr>
 nnoremap <leader>tw :set wrap!<cr>
 nnoremap <leader>ti :ALEToggle<cr>
