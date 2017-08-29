@@ -1,4 +1,5 @@
 alias iwant='sudo pacman -Syv'
+alias gtfo='sudo pacman -Rsv'
 alias wtfis='pacman -Ss'
 alias inventory='pacman -Qqen'
 alias updateallthethings='sudo pacman -Syuv'
