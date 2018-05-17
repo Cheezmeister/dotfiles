@@ -1,6 +1,8 @@
 [user]
     name = Cheezmeister
-    email = @gmail
+    email = github@luchenlabs.com
+[github]
+    user = Cheezmeister
 
 [core]
     pager = less
@@ -18,6 +20,7 @@
     bloody-hell-just-do-the-thing = branch --set-upstream-to=origin/master master
     push-new-branch = !git push --set-upstream origin $(git currentbranch)
     delete-branch = branch -d
+    create-branch = checkout -b
 
     m = checkout master
     s = status
@@ -50,6 +53,9 @@
       cm = commit -m
       ca = commit -a
       cam = commit --all --message
+
+    r = reset
+    f = fetch
 
 
 [color]
