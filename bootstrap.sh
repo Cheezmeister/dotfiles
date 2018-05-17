@@ -5,8 +5,8 @@
 export DOTFILES=$(dirname $PWD/$0)
 echo "Dotfiles dir set to $DOTFILES"
 
-# Git Config must be symlinked
-ln -s $DOTFILES/gitconfig ~/.gitconfig
+# Git Config is all special
+git config --global include.path "$DOTFILES/gitconfig"
 
 # Env vars in *profile
 for profile in zshenv profile zprofile bash_profile; do
