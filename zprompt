@@ -14,6 +14,6 @@ os='%F{red}$(uname)%f'
 export PROMPT="
 $who at $what by $how under $os in $whither
 %# "
-export RPROMPT='$vcs_info_msg_0_ 合気道'
+export RPROMPT='%(?..%?) $vcs_info_msg_0_ 合気道'
 export PS1=$PROMPT
 export RPS1=$RPROMPT

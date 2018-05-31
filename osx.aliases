@@ -1,4 +1,5 @@
 alias iwant='brew install'
+alias bci='brew cask install'
 alias gtfo='brew remove'
 alias wtfis='brew search'
 alias inventory='brew list'
