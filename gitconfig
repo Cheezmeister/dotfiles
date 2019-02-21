@@ -8,6 +8,7 @@
     excludesfile =~/.gitignore
 
 [alias]
+    root = rev-parse --show-toplevel
     tags = tag -l
     branches = branch -a
     remotes = remote -v
