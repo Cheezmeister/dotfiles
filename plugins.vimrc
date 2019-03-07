@@ -38,8 +38,13 @@ Plug 'xolox/vim-easytags', { 'for': 'cpp' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+Plug 'rking/ag.vim'
+Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf'
 
 " Language packs turned on as needed
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
 " Plug 'freitass/todo.txt-vim'
 " Plug 'kchmck/vim-coffee-script'
 " Plug 'mctenshi/vim-literate-coffeescript'

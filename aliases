@@ -11,6 +11,7 @@ alias f='file'
 alias g='git'
 alias h='hub'
 alias i='iwant'
+alias k='kill'
 alias l="clear; r"
 alias m=$PAGER
 alias o=$OPENER
@@ -26,6 +27,8 @@ alias G='gee.pl'
 # Meta
 alias rz='source ~/.zshrc'
 alias ez='$EDITOR ~/.zshrc'
+alias ev='$EDITOR ~/.vimrc'
+alias eg='$EDITOR ~/.gitconfig'
 
 # Applications
 alias web=$WEB_BROWSER
@@ -33,6 +36,7 @@ alias term=$TERMINAL
 alias fm='$FILE_MANAGER .'
 
 # Misc
+alias wherethehellis='find . -name'
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
 alias psag='ps aux | grep'
@@ -47,3 +51,4 @@ alias precious='sudo pip install'
 alias up='vagrant up && vagrant ssh'
 alias nonotherecmake='rm -rf CMakeCache.txt CMakeFiles CPackConfig.cmake CPackSourceConfig.cmake Makefile cmake_install.cmake'
 alias yolo='echo "¯\\_(ツ)_/¯"'
+alias look_of_disapproval='echo "ಠ_ಠ"'

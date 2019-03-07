@@ -47,7 +47,7 @@ nnoremap <Backspace> :helpclose \| cclose \| call VimuxCloseRunner() \| NERDTree
 " Abbreviations
 " --------------------------------------------------------------------------------
 iabbrev yolo ¯\_(ツ)_/¯
-iabbrev bml Brendan Luchen
+iabbrev look_of_disapproval ಠ_ಠ
 
 
 " --------------------------------------------------------------------------------
@@ -96,6 +96,7 @@ nnoremap <leader>a :mksession!<CR>:xa<CR>
 " Meta
 nnoremap <leader>me :edit $MYVIMRC<cr>
 nnoremap <leader>mr :source $MYVIMRC<cr>
+nnoremap <leader>mp :source $MYVIMRC<cr>:PlugInstall<cr>
 vnoremap <leader>mx "xy@x<cr>
 
 " Pluginery

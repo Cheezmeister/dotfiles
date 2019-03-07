@@ -31,6 +31,8 @@
 
     b = branch
 
+    f = fetch
+
     p = pull
       pp = !git pull --rebase && git push
 
@@ -63,3 +65,5 @@
     browser = open
 [push]
 	default = simple
+[github]
+	user = Cheezmeister
