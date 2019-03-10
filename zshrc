@@ -1,7 +1,7 @@
 export HISTFILE="$HOME/.history"
 export SAVEHIST=10000
 
-# Global Aliases
+# Global Aliases For Piping Things
 alias -g px='| xargs'
 alias -g pg='| grep'
 

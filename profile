@@ -8,5 +8,3 @@ export TERMINAL='xfce4-terminal'
 export FILE_MANAGER='nautilus'
 export WEB_BROWSER='firefox'
 export OPENER='xdg-open'
-
-export DOTFILES="$HOME/dotfiles"
