@@ -48,6 +48,8 @@ nnoremap <Backspace> :helpclose \| cclose \| call VimuxCloseRunner() \| NERDTree
 " --------------------------------------------------------------------------------
 iabbrev yolo ¯\_(ツ)_/¯
 iabbrev look_of_disapproval ಠ_ಠ
+iabbrev bml Brendan Luchen
+iabbrev alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 
 " --------------------------------------------------------------------------------
@@ -124,3 +126,21 @@ nnoremap <leader>ti :ALEToggle<cr>
 
 " Miscellany
 nnoremap <Leader>] :tag<space>
+nnoremap <leader>h i" <esc>80a-<esc>yypO
+
+" --------------------------------------------------------------------------------
+"  Mini-Plugins
+" --------------------------------------------------------------------------------
+function! s:lit(language)
+  runtime! syntax/markdown.vim
+  unlet b:current_syntax
+  syn clear markdownCode
+  exec "syn include @inlinecode syntax/" . a:language . ".vim"
+  syn region inlineCodeBlock start='^    ' end='$' contains=@inlinecode
+endfunction
+function! s:autolit()
+  let l:language=split(@%, '\.')[-2] "FIXME not always the extension
+  call s:lit(language)
+endfunction
+command! -nargs=1 Lit call s:lit(<args>)
+command! Autolit call s:autolit()

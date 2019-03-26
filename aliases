@@ -1,7 +1,7 @@
 
 # Alphabeticals
 alias @='sudo'
-alias _='PATH=/usr/local/bin:~/bin:$PATH'
+alias _='path'
 alias a='ls -alph'
 alias b='~/bin/just_bloody_build_it.pl'
 alias c='cat'
@@ -21,8 +21,12 @@ alias t='todo.sh'
 alias u='cd ..'
 alias v=$VISUAL
 alias x='ecks.pl'
+alias y='yarn'
 alias z='7z'
 alias G='gee.pl'
+
+# Shorthands
+alias dc='docker-compose'
 
 # Meta
 alias rz='source ~/.zshrc'
@@ -52,3 +56,4 @@ alias up='vagrant up && vagrant ssh'
 alias nonotherecmake='rm -rf CMakeCache.txt CMakeFiles CPackConfig.cmake CPackSourceConfig.cmake Makefile cmake_install.cmake'
 alias yolo='echo "¯\\_(ツ)_/¯"'
 alias look_of_disapproval='echo "ಠ_ಠ"'
+alias path='PATH=/usr/local/bin:~/bin:$PATH'
