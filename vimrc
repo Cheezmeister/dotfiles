@@ -105,6 +105,7 @@ vnoremap <leader>mx "xy@x<cr>
 nnoremap <leader>v :call VimuxRunCommand("")<Left><Left>
 nnoremap <leader>d :Dispatch<space>
 nnoremap <leader>b :wa<cr>:call VimuxRunLastCommand()<cr>
+nnoremap <leader>f :FZF<cr>
 nnoremap <leader>g :Ag <C-R><C-W>
 
 " Todo lists
