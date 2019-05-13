@@ -4,6 +4,7 @@ export SAVEHIST=10000
 # Global Aliases For Piping Things
 alias -g px='| xargs'
 alias -g pg='| grep'
+alias -g pc='| copy-to-clipboard'
 
 
 # Expand aliases as I type
