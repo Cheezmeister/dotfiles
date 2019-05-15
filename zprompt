@@ -6,7 +6,7 @@ precmd() { vcs_info }
 
 setopt prompt_subst
 
-who='%F{green}%n%f'
+who='%F{$COLOR}%n%f'
 what='%F{magenta}%M%f'
 whither='%F{cyan}%~%f'
 how='%F{yellow}%l%f'
