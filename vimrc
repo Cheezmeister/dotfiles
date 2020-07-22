@@ -69,6 +69,7 @@ set ttimeout ttimeoutlen=20 " I'm not on dialup
 set timeout timeoutlen=400 " Nor the world's fastest typist
 set scrolloff=4
 set autoread
+set background=dark " Always
 filetype plugin on
 filetype plugin indent on
 syntax on " Duh.

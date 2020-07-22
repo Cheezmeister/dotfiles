@@ -17,7 +17,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'PeterRincker/vim-argumentative'
-Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'bling/vim-airline'
 Plug 'honza/vim-snippets'
@@ -40,7 +39,8 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'rking/ag.vim'
 Plug 'junegunn/fzf.vim'
-Plug '/usr/local/opt/fzf'
+
+" TODO Plug '/usr/local/opt/fzf'
 
 " Language packs turned on as needed
 " Plug 'leafgarland/typescript-vim'
