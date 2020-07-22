@@ -9,29 +9,34 @@
 rounded = 0
 border_width = 2
 background_color = #000000 46
+background_color_hover = #000000 50
 border_color = #FFFFFF 26
 
 # ID 2
-rounded = 2
-border_width = 0
+rounded = 0
+border_width = 1
 background_color = #55B661 40
-border_color = #000000 100
+background_color_hover = #55B661 50
+border_color = #FFFFFF 29
 
 # ID 3
 rounded = 0
 border_width = 1
 background_color = #558BB5 37
+background_color_hover = #558BB5 50
 border_color = #FFFFFF 29
 
 # ID 4
 rounded = 2
 border_width = 0
 background_color = #000000 100
+background_color_hover = #000000 50
 border_color = #FFFFFF 100
 
 # Panel
+panel_items = CTSL
 panel_monitor = all
-panel_position = left center vertical
+panel_position = center left vertical
 panel_size = 100% 200
 panel_margin = 0 0
 panel_padding = 0 0 0
@@ -87,6 +92,14 @@ systray_background_id = 0
 systray_icon_size = 16
 systray_icon_asb = 70 0 0
 
+# Launcher
+launcher_item_app = steam.desktop
+launcher_item_app = firefox.desktop
+launcher_item_app = thunar.desktop
+launcher_icon_size = 24
+launcher_padding = 4 4 4
+launcher_tooltip = 1
+
 # Tooltips
 tooltip = 1
 tooltip_padding = 2 2
@@ -112,5 +125,10 @@ bat2_font = Sans 12
 battery_font_color = #FFFFFF 100
 battery_padding = 0 0
 battery_background_id = 0
+
+# Clock
+time1_format = %H:%M:%S
+clock_font_color = #ffffff 100
+clock_padding = 0 4
 
 # End of config
