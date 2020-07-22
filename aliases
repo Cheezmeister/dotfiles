@@ -26,7 +26,9 @@ alias z='7z'
 alias G='gee.pl'
 
 # Shorthands
+alias dk='docker'
 alias dc='docker-compose'
+
 
 # Meta
 alias rz='source ~/.zshrc'
