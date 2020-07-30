@@ -42,6 +42,7 @@ alias term=$TERMINAL
 alias fm='$FILE_MANAGER .'
 
 # Misc
+alias plusex='chmod +x'
 alias wherethehellis='find . -name'
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
@@ -51,9 +52,9 @@ alias aremaref='rm -rf'
 alias wherewasi='cd -'
 alias script-that-please='echo !! >'
 alias latex2pdf='pdflatex' # Come on, guys.
-alias ineed='sudo npm install -g'
-alias gimme='sudo gem install'
-alias precious='sudo pip install'
+# Don't do this. alias ineed='sudo npm install -g'
+# Don't do this. alias gimme='sudo gem install'
+# Don't do this. alias precious='sudo pip install'
 alias up='vagrant up && vagrant ssh'
 alias nonotherecmake='rm -rf CMakeCache.txt CMakeFiles CPackConfig.cmake CPackSourceConfig.cmake Makefile cmake_install.cmake'
 alias yolo='echo "¯\\_(ツ)_/¯"'
