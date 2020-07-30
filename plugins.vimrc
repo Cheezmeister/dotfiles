@@ -16,6 +16,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-commentary'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
@@ -25,7 +26,6 @@ Plug 'kien/rainbow_parentheses.vim/'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
@@ -44,14 +44,18 @@ Plug '/usr/local/opt/fzf'
 
 " Language packs turned on as needed
 Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
 Plug 'ianks/vim-tsx'
+Plug 'MaxMEllon/vim-jsx-pretty'
 " Plug 'freitass/todo.txt-vim'
 " Plug 'kchmck/vim-coffee-script'
 " Plug 'mctenshi/vim-literate-coffeescript'
 " Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 " Plug 'digitaltoad/vim-jade'
-" Plug 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir'
 " Plug 'slime-lang/vim-slime'
 " Plug 'wting/rust.vim'
+" Plug 'plasticboy/vim-markdown'
+Plug 'GEverding/vim-hocon'
 
 call plug#end()

@@ -6,6 +6,9 @@ alias -g px='| xargs'
 alias -g pg='| grep'
 alias -g pc='| copy-to-clipboard'
 
+# Global aliases for &&ing things
+alias -g sendit='&& git push'
+alias -g and-tell-me='&& say "That long running thing is now done" || echo "\a"'
 
 # Expand aliases as I type
 globalias() {

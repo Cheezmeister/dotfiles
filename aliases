@@ -27,6 +27,7 @@ alias G='gee.pl'
 
 # Shorthands
 alias dc='docker-compose'
+alias dk='docker'
 
 # Meta
 alias rz='source ~/.zshrc'
@@ -40,6 +41,7 @@ alias term=$TERMINAL
 alias fm='$FILE_MANAGER .'
 
 # Misc
+alias plusex='chmod +x'
 alias wherethehellis='find . -name'
 alias untargz='tar xvzf'
 alias targz='tar cvzf'
