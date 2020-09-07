@@ -73,7 +73,7 @@ set background=dark " Always
 filetype plugin on
 filetype plugin indent on
 syntax on " Duh.
- 
+
 filetype plugin on
 syntax on
 
@@ -146,3 +146,4 @@ function! s:autolit()
 endfunction
 command! -nargs=1 Lit call s:lit(<args>)
 command! Autolit call s:autolit()
+hi CursorColumn ctermbg=black | hi CursorLine ctermbg=black
