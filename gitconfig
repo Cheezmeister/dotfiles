@@ -19,6 +19,10 @@
     bloody-hell-just-do-the-thing = branch --set-upstream-to=origin/master master
     push-new-branch = !git push --set-upstream origin $(git currentbranch)
     delete-branch = branch -d
+    cleanup = !git clean -dn && echo \"Proceed? [Y/n]\" && read yn && [[ ! $yn =~ ^[Nn]$ ]] && git clean -df
+    toggle-branch = checkout -
+    yolo = push --no-verify
+    it-is-done = !git checkout master && git branch -D @{-1}
 
     m = checkout master
     s = status
@@ -30,30 +34,36 @@
       au = add --update
 
     b = branch
-
-    f = fetch
-
-    p = pull
-      pp = !git pull --rebase && git push
-
-    u = pull upstream master
-
-    # Swiped from sjl
-    l   = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an %Cblue%ar%Creset)%Creset'
-      ll  = log     --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an %Cblue%ar%Creset)%Creset'
-      gl  = log -12 --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(by %an %Cblue%ar%Creset)%Creset%C(yellow bold)%d%Creset%n'
-      gll = log     --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(%cr by %an %Cblue%ar%Creset)%Creset%C(yellow bold)%d%Creset%n'
-
-    d = diff
-      ds = diff --staged
-      df = diff --diff-filter
-      dsf = diff --staged --diff-filter
+    bob = checkout -b $(git currentbranch)-bob
 
     c = commit
       cm = commit -m
       ca = commit -a
       cam = commit --all --message
 
+    d = diff
+      ds = diff --staged
+      df = diff --diff-filter
+      dsf = diff --staged --diff-filter
+
+    f = fetch
+      fa = fetch --all
+
+    h = help
+
+    p = pull
+      pp = !git pull --rebase && git push
+      pro = pull --rebase origin master
+
+    r = reset
+
+    u = pull upstream master
+
+    # Swiped from sjl (and mutilated)
+    l   = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset (by %C(yellow bold)%an %Cblue%ar%Creset)%Creset'
+      ll  = log     --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset (by %C(yellow bold)%an %Cblue%ar%Creset)%Creset'
+      gl  = log -12 --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s (by %C(yellow bold)%an %Cblue%ar%Creset)%Creset%C(yellow bold)%d%Creset%n'
+      gll = log     --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s (%cr by %C(yellow bold)%an %Cblue%ar%Creset)%Creset%C(yellow bold)%d%Creset%n'
 
 [color]
     branch = true
@@ -64,6 +74,7 @@
 [web]
     browser = open
 [push]
-	default = simple
+    default = simple
 [github]
-	user = Cheezmeister
+    user = Cheezmeister
+    email = github@luchenlabs.com
