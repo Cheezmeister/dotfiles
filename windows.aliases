@@ -1,0 +1,7 @@
+alias iwant='cinst.exe'
+alias gtfo='echo "Do not kow how to uninstall [try cinst.exe /h]:"'
+alias wtfis='echo "Do not know how to search for [try cinst.exe /h]:"'
+alias inventory='echo "Do not know how to list packages: try cinst.exe /h"'
+alias updateallthethings='Do not know how to update Chocolatey packages'
+alias copy-to-clipboard='clip.exe'
+alias paste-from-clipboard='clip.exe'
