@@ -1,7 +1,5 @@
 
 # Alphabeticals
-alias @='sudo'
-alias _='path'
 alias a='ls -alph'
 alias b='~/bin/just_bloody_build_it.pl'
 alias c=`command -v bat || echo 'cat'` # Use bat iff available
@@ -11,18 +9,25 @@ alias f='file'
 alias g='git'
 alias h='hub'
 alias i='iwant'
+alias j='cowsay "¯\_(ツ)_/¯" | lolcat'
 alias k='kill'
 alias l="clear; r"
 alias m=$PAGER
+alias n='cowsay "¯\_(ツ)_/¯" | lolcat'
 alias o=$OPENER
 alias p='grep -P'
+# alias r is unused for a zsh builtin
+alias q='ssh atreyu'
 alias s='ls'
 alias t='todo.sh'
 alias u='cd ..'
 alias v=$VISUAL
+alias w='ssh macbml'
 alias x='ecks.pl'
 alias y='yarn'
 alias z='7z'
+alias @='sudo'
+alias _='path'
 alias G='gee.pl'
 
 # Shorthands
