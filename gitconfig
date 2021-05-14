@@ -23,6 +23,8 @@
     toggle-branch = checkout -
     yolo = push --no-verify
     it-is-done = !git checkout master && git branch -D @{-1}
+    precommit = !.git/hooks/pre-commit
+    add-upstream-remote = !git remote add upstream $(git remote get-url origin)
 
     m = checkout master
     s = status
