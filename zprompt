@@ -8,11 +8,12 @@ setopt prompt_subst
 
 who='%F{$COLOR}%n%f'
 what='%F{magenta}%M%f'
+when='%F{blue}%T%f'
 whither='%F{cyan}%~%f'
 how='%F{yellow}%l%f'
 os='%F{red}$(uname)%f'
 export PROMPT="
-$who at $what by $how under $os in $whither
+$who at $what by $how under $os ca. $when in $whither
 %# "
 export RPROMPT='%(?..%?) $vcs_info_msg_0_ 合気道'
 export PS1=$PROMPT

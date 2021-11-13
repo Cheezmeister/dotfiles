@@ -94,6 +94,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>e :e<CR>
+nnoremap <leader>z :w<CR><C>z
 nnoremap <leader>a :mksession!<CR>:xa<CR>
 
 " Meta
