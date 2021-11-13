@@ -22,9 +22,10 @@
     cleanup = !git clean -dn && echo \"Proceed? [Y/n]\" && read yn && [[ ! $yn =~ ^[Nn]$ ]] && git clean -df
     toggle-branch = checkout -
     yolo = push --no-verify
-    it-is-done = !git checkout master && git branch -D @{-1}
+    done = !git checkout master && git branch -D @{-1} && git pull
     precommit = !.git/hooks/pre-commit
     add-upstream-remote = !git remote add upstream $(git remote get-url origin)
+    fuckit = reset --hard
 
     m = checkout master
     s = status
@@ -62,8 +63,8 @@
     u = pull upstream master
 
     # Swiped from sjl (and mutilated)
-    l   = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset (by %C(yellow bold)%an %Cblue%ar%Creset)%Creset'
-      ll  = log     --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset (by %C(yellow bold)%an %Cblue%ar%Creset)%Creset'
+    l   = log -18 --color=always --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset (by %C(yellow bold)%an %Cblue%ar%Creset)%Creset'
+      ll  = log     --color=always --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset (by %C(yellow bold)%an %Cblue%ar%Creset)%Creset'
       gl  = log -12 --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s (by %C(yellow bold)%an %Cblue%ar%Creset)%Creset%C(yellow bold)%d%Creset%n'
       gll = log     --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s (%cr by %C(yellow bold)%an %Cblue%ar%Creset)%Creset%C(yellow bold)%d%Creset%n'
 
