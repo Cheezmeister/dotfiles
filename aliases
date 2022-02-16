@@ -48,13 +48,14 @@ alias fm='$FILE_MANAGER .'
 
 # Misc
 alias plusex='chmod +x'
-alias wherethehellis='find . -name'
-alias untargz='tar xvzf'
 alias targz='tar cvzf'
+alias untargz='tar xvzf'
 alias psag='ps aux | grep'
 alias obliterate='rm -rf'
+alias timestamp='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias aremaref='rm -rf'
 alias wherewasi='cd -'
+alias wherethehellis='find . -name'
 alias script-that-please='echo !! >'
 alias latex2pdf='pdflatex' # Come on, guys.
 # Don't do this. alias ineed='sudo npm install -g'
