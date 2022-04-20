@@ -45,6 +45,7 @@ alias eg='$EDITOR ~/.gitconfig'
 alias web=$WEB_BROWSER
 alias term=$TERMINAL
 alias fm='$FILE_MANAGER .'
+alias say=$SAYER
 
 # Misc
 alias plusex='chmod +x'
@@ -66,3 +67,4 @@ alias nonotherecmake='rm -rf CMakeCache.txt CMakeFiles CPackConfig.cmake CPackSo
 alias yolo='echo "¯\\_(ツ)_/¯"'
 alias look_of_disapproval='echo "ಠ_ಠ"'
 alias path='PATH=/usr/local/bin:~/bin:$PATH'
+alias epoch='date +%s'

@@ -5,6 +5,7 @@ export SAVEHIST=10000
 alias -g px='| xargs'
 alias -g pg='| grep'
 alias -g pc='| copy-to-clipboard'
+alias -g pwc='| wc'
 
 # Global aliases for Anding things
 alias -g sendit='&& git push'
