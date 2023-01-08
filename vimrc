@@ -43,12 +43,20 @@ cabbrev cmlt CMakeLists.txt
 " Because sometimes it's all about the code
 nnoremap <Backspace> :helpclose \| cclose \| call VimuxCloseRunner() \| NERDTreeClose \| TagbarClose<CR>
 
+" Because this plugin is awful but it's better than anything claiming to be "dark powered"
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+" let g:neosnippet#disable_runtime_snippets={'_': 1}
+
+imap <c-l>     <Plug>(neosnippet_expand)
+smap <c-l>     <Plug>(neosnippet_expand)
+xmap <c-l>     <Plug>(neosnippet_expand)
+
 " --------------------------------------------------------------------------------
 " Abbreviations
 " --------------------------------------------------------------------------------
 iabbrev yolo ¯\_(ツ)_/¯
 iabbrev look_of_disapproval ಠ_ಠ
-iabbrev bml Brendan Luchen
 iabbrev alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 
@@ -147,4 +155,6 @@ function! s:autolit()
 endfunction
 command! -nargs=1 Lit call s:lit(<args>)
 command! Autolit call s:autolit()
-hi CursorColumn ctermbg=black | hi CursorLine ctermbg=black
+
+
+command! EditScratchpad edit ~/stuff/scratchpad

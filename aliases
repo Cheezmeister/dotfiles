@@ -33,11 +33,13 @@ alias G='gee.pl'
 # Shorthands
 alias dk='docker'
 alias dc='docker-compose'
+alias kc='kubectl'
 
 
 # Meta
 alias rz='source ~/.zshrc'
 alias ez='$EDITOR ~/.zshrc'
+alias ea='$EDITOR $DOTFILES/aliases'
 alias ev='$EDITOR ~/.vimrc'
 alias eg='$EDITOR ~/.gitconfig'
 
@@ -66,3 +68,5 @@ alias nonotherecmake='rm -rf CMakeCache.txt CMakeFiles CPackConfig.cmake CPackSo
 alias yolo='echo "¯\\_(ツ)_/¯"'
 alias look_of_disapproval='echo "ಠ_ಠ"'
 alias path='PATH=/usr/local/bin:~/bin:$PATH'
+alias maths='node -p'
+alias hr='perl -e "print \"-\" x 80" | lolcat; echo'

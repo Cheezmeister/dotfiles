@@ -34,23 +34,27 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'xolox/vim-misc', { 'for': 'cpp' } 
 Plug 'xolox/vim-easytags', { 'for': 'cpp' }
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'rking/ag.vim'
 Plug 'junegunn/fzf.vim'
 
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+
+
 " TODO Plug '/usr/local/opt/fzf'
 
 " Language packs turned on as needed
-" Plug 'leafgarland/typescript-vim'
-" Plug 'ianks/vim-tsx'
-" Plug 'pangloss/vim-javascript'
-" Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
 " Plug 'freitass/todo.txt-vim'
-" Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 " Plug 'mctenshi/vim-literate-coffeescript'
-" Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 " Plug 'digitaltoad/vim-jade'
 " Plug 'elixir-lang/vim-elixir'
 " Plug 'slime-lang/vim-slime'
@@ -60,5 +64,6 @@ Plug 'junegunn/fzf.vim'
 " Plug 'mxw/vim-jsx'
 " Plug 'plasticboy/vim-markdown'
 " Plug 'GEverding/vim-hocon'
+Plug 'b4b4r07/vim-hcl'
 
 call plug#end()

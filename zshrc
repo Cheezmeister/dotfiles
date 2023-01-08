@@ -44,3 +44,5 @@ source $DOTFILES/zprompt
 
 # Aliases
 source $DOTFILES/aliases
+
+alias solarsail='eval "$(starship init zsh)"'
