@@ -48,7 +48,7 @@ nnoremap <Backspace> :helpclose \| cclose \| call VimuxCloseRunner() \| NERDTree
 " --------------------------------------------------------------------------------
 iabbrev yolo ¯\_(ツ)_/¯
 iabbrev look_of_disapproval ಠ_ಠ
-iabbrev bml Brendan Luchen
+" iabbrev bml Brendan Luchen
 iabbrev alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 

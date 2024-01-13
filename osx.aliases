@@ -8,3 +8,4 @@ alias copy-to-clipboard='pbcopy'
 alias paste-from-clipboard='pbpaste'
 alias battery='pmset -g batt'
 alias is-the-lid-closed='ioreg  -r -k AppleClamshellState | grep "AppleClamshellState" | cut -d "=" -f 2'
+alias o=$OPENER
