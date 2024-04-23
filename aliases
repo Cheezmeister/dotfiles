@@ -1,7 +1,7 @@
 
 # Alphabeticals
 alias a='ls -alph'
-alias b='~/bin/just_bloody_build_it.pl'
+alias b='just_bloody_build_it.pl'
 alias c=`command -v bat || echo 'cat'` # Use bat iff available
 alias d='cd'
 alias e='exit'
@@ -16,7 +16,7 @@ alias m=$PAGER
 alias n='cowsay "¯\_(ツ)_/¯" | lolcat'
 alias o=$OPENER
 alias p='grep -P'
-# alias r is unused for a zsh builtin
+# alias r is atually a zsh builtin
 alias q='ssh atreyu'
 alias s='ls'
 alias t='todo.sh'
@@ -48,6 +48,7 @@ alias fm='$FILE_MANAGER .'
 alias say=$SAYER
 
 # Misc
+alias github-clone-read-only='git clone https://github.com/$GITHUB_HANDLE/'
 alias plusex='chmod +x'
 alias targz='tar cvzf'
 alias untargz='tar xvzf'
