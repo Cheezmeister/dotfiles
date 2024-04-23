@@ -27,7 +27,7 @@
     add-upstream-remote = !git remote add upstream $(git remote get-url origin)
     fuckit = reset --hard
 
-    m = checkout master
+    m = checkout main
     s = status
     sh = stash
     co = checkout
