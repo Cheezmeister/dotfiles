@@ -41,6 +41,10 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 # From https://gist.github.com/yagihiro/173169
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
+# Make sure NPM does not require sudo
+# which npm && npm config set prefix ~/.npm
+
+
 # Prompt
 source $DOTFILES/zprompt
 
