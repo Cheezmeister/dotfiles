@@ -30,6 +30,7 @@ local plugins = {
 
  'neovim/nvim-lspconfig',
  'nvim-treesitter/nvim-treesitter',
+ 'nvim-treesitter/nvim-treesitter-textobjects',
  'nvim-lualine/lualine.nvim',
  'windwp/nvim-ts-autotag',
  'windwp/nvim-autopairs',
@@ -47,7 +48,13 @@ local plugins = {
 
 
  -- 'wbthomason/packer.nvim',
-  'svrana/neosolarized.nvim',
+  -- 'svrana/neosolarized.nvim',
+
+  { 'kylechui/nvim-surround',
+    version = "*",
+    event = "VeryLazy",
+  }
+
 }
 
 local opts = {}
@@ -67,6 +74,7 @@ local just_call_setup = function(plugin) plugin.setup({}) end
 -- BEGIN MORE COPYPASTA
 
 setup_plugin("nvim_comment", just_call_setup)
+setup_plugin("nvim-surround", just_call_setup)
 
 setup_plugin("lualine", function(lualine) lualine.setup {
   options = {
@@ -124,10 +132,10 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = vim.api.nvim_create_augroup("Format", { clear = true }),
       buffer = bufnr,
-      callback = function() 
+      callback = function()
         if vim.lsp.buf.formatting_seq_sync ~= nil then
-          vim.lsp.buf.formatting_seq_sync() 
-        end 
+          vim.lsp.buf.formatting_seq_sync()
+        end
       end
     })
   end

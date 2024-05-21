@@ -22,7 +22,7 @@
     cleanup = !git clean -dn && echo \"Proceed? [Y/n]\" && read yn && [[ ! $yn =~ ^[Nn]$ ]] && git clean -df
     toggle-branch = checkout -
     yolo = push --no-verify
-    done = !git checkout master && git branch -D @{-1} && git pull
+    done = !git m && git branch -D @{-1} && git pull
     precommit = !.git/hooks/pre-commit
     add-upstream-remote = !git remote add upstream $(git remote get-url origin)
     fuckit = reset --hard
