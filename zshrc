@@ -1,5 +1,6 @@
 export HISTFILE="$HOME/.history"
 export SAVEHIST=10000
+export HISTORY_IGNORE="(ls|cd|pwd|exit|cd)*"
 
 # Global Aliases For Piping Things
 alias -g px='| xargs'
