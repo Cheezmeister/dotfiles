@@ -9,3 +9,4 @@ alias paste-from-clipboard='pbpaste'
 alias battery='pmset -g batt'
 alias is-the-lid-closed='ioreg  -r -k AppleClamshellState | grep "AppleClamshellState" | cut -d "=" -f 2'
 alias o=$OPENER
+alias todo='osascript -e "tell application \"Reminders\" to get name of every reminder of Todo list" '
