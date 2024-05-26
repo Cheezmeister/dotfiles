@@ -48,6 +48,8 @@ local plugins = {
 
  -- 'wbthomason/packer.nvim',
   'svrana/neosolarized.nvim',
+
+  'nvim-tree/nvim-tree.lua',
 }
 
 local opts = {}

@@ -119,7 +119,7 @@ nnoremap <leader>if :ALEFix<cr>
 
 " Toggling things
 nnoremap <leader>ta :AirlineToggle<cr>
-nnoremap <leader>tn :NERDTreeToggle<cr>
+nnoremap <leader>tn :NvimTreeToggle<cr>
 nnoremap <leader>to :TagbarToggle<cr>
 nnoremap <leader>tr :RainbowParenthesesToggle<cr>
 nnoremap <leader>tl :set number! relativenumber! list!<cr>

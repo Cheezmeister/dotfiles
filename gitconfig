@@ -81,3 +81,5 @@
 [github]
     user = Cheezmeister
     email = github@luchenlabs.com
+[pull]
+	rebase = false
