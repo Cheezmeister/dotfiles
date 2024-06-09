@@ -16,7 +16,7 @@ alias m=$PAGER
 alias n='cowsay "¯\_(ツ)_/¯" | lolcat'
 alias o=$OPENER
 alias p='grep -P'
-# alias r is atually a zsh builtin
+alias r='!!'
 alias q='ssh atreyu'
 alias s='ls'
 alias t='todo.sh'
@@ -38,6 +38,7 @@ alias dc='docker-compose'
 # Meta
 alias rz='source ~/.zshrc'
 alias ez='$EDITOR ~/.zshrc'
+alias evn='$EDITOR ~/.config/nvim/init.lua'
 alias ev='$EDITOR ~/.vimrc'
 alias eg='$EDITOR ~/.gitconfig'
 

@@ -148,3 +148,5 @@ endfunction
 command! -nargs=1 Lit call s:lit(<args>)
 command! Autolit call s:autolit()
 hi CursorColumn ctermbg=black | hi CursorLine ctermbg=black
+
+colorscheme habamax
