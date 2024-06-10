@@ -1,6 +1,7 @@
+-- FIXME: Store this in dotfiles!
 _G.vim = vim
 
--- https://github.com/folke/lazy.nvim#-installation
+-- NOTE: https://github.com/folke/lazy.nvim#-installation
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -15,26 +16,26 @@ end
 vim.opt.rtp:prepend(lazypath)
 -- END COPYPASTA
 
+-- BEGIN PLUGINS
 local plugins = {
  "terrortylor/nvim-comment",
 
- { "sourcegraph/sg.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" }
- },
+  -- 'wbthomason/packer.nvim', -- I'm not sure what this is
+  -- 'nvim-telescope/telescope.nvim',
+  -- FIXME: { "sourcegraph/sg.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+  'onsails/lspkind-nvim', -- VSCode-like pictograms
+  'L3MON4D3/LuaSnip', -- Snippet engine
+  'hedyhli/outline.nvim',
+  'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built-in LSP
+  'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
+  'hrsh7th/nvim-cmp', -- A completion engine plugin for neovim
 
- "onsails/lspkind-nvim", -- VSCode-like pictograms
- "L3MON4D3/LuaSnip", -- Snippet engine
- "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim's built-in LSP
- "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words
- "hrsh7th/nvim-cmp", -- A completion engine plugin for neovim
-
- 'neovim/nvim-lspconfig',
- 'nvim-treesitter/nvim-treesitter',
- 'nvim-lualine/lualine.nvim',
- 'windwp/nvim-ts-autotag',
- 'windwp/nvim-autopairs',
- -- 'nvim-telescope/telescope.nvim',
- 'akinsho/nvim-bufferline.lua',
+  'neovim/nvim-lspconfig',
+  'nvim-treesitter/nvim-treesitter',
+  'nvim-lualine/lualine.nvim',
+  'windwp/nvim-ts-autotag',
+  'windwp/nvim-autopairs',
+  'akinsho/nvim-bufferline.lua',
 
   'glepnir/lspsaga.nvim',
   'jose-elias-alvarez/null-ls.nvim',
@@ -46,29 +47,35 @@ local plugins = {
   'williamboman/mason-lspconfig.nvim',
 
 
- -- 'wbthomason/packer.nvim',
   'svrana/neosolarized.nvim',
-
   'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-web-devicons',
+
+  'kylechui/nvim-surround',
+
 }
+-- END PLUGINS
 
 local opts = {}
 require("lazy").setup(plugins, opts)
 
 
+local just_call_setup = function(plugin) plugin.setup({}) end
 local setup_plugin = function(name, cb)
   local status, plugin = pcall(require, name)
   if (not status) then return end
-  cb(plugin)
+  (cb or just_call_setup)(plugin)
 end
-local just_call_setup = function(plugin) plugin.setup({}) end
 
+setup_plugin("nvim_comment", just_call_setup)
+setup_plugin("sg", just_call_setup)
+setup_plugin( "outline", just_call_setup)
+
+setup_plugin("nvim-surround")
 
 
 
 -- BEGIN MORE COPYPASTA
-
-setup_plugin("nvim_comment", just_call_setup)
 
 setup_plugin("lualine", function(lualine) lualine.setup {
   options = {
@@ -199,21 +206,6 @@ setup_plugin("cmp", function(cmp)
   ]]
 end)
 
--- --------------------------------------------------------------------------------
--- local status, cmp = pcall(require, "cmp")
--- if (not status) then return end
--- --------------------------------------------------------------------------------
--- local lspkind = require 'lspkind'
---
--- cmp.setup({
--- })
---
--- vim.cmd [[
---   set completeopt=menuone,noinsert,noselect
---   highlight! default link CmpItemKind CmpItemMenuDefault
--- ]]
---
-
 -- TODO setup_plugin("nvim-treesitter.configs"
 -- ...
 -- end)
@@ -233,15 +225,19 @@ ts.setup {
   },
   ensure_installed = {
     "css",
+    -- TODO: "coffeescript",
+    -- TODO: "kotlin",
     "fish",
     "html",
     "json",
     "javascript",
+    "kotlin",
     "lua",
     "php",
     "swift",
     "toml",
     "tsx",
+    -- TODO: "vimdoc",
     "yaml",
   },
   autotag = {
@@ -294,12 +290,43 @@ setup_plugin("prettier", function(prettier)
       "typescriptreact",
       "json",
       "scss",
+      "lua",
       "less"
     }
   }
 end)
 
---------------------------------------------------------------------------------
-local status, prettier = pcall(require, "prettier")
-if (not status) then return end
---------------------------------------------------------------------------------
+setup_plugin("nvim-tree", function(tree)
+  tree.setup {
+    renderer = {
+      icons = {
+        show = False
+      }
+    }
+  } 
+end)
+
+-- load snippets from path/of/your/nvim/config/my-cool-snippets
+-- FIXME(delete) require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./my-cool-snippets" } })
+setup_plugin("luasnip.loaders.from_vscode", function (vscode_snippets)
+  vscode_snippets.lazy_load({ paths = { "./my-cool-snippets" } })
+end)
+
+
+setup_plugin("supermaven-nvim", function(supermaven)
+  supermaven.setup({
+    keymaps = {
+      accept_suggestion = "<Tab>",
+      clear_suggestion = "<C-]>",
+      accept_word = "<C-j>",
+    },
+    ignore_filetypes = { cpp = true },
+    color = {
+      suggestion_color = "#ffffff",
+      cterm = 244,
+    },
+    disable_inline_completion = false, -- disables inline completion for use with cmp
+    disable_keymaps = false -- disables built in keymaps for more manual control
+  })
+end)
+
