@@ -25,3 +25,11 @@ for dotfile in abcde.conf zshrc vimrc tmux.conf xinitrc xmodmaprc bashrc; do
 done
 
 mkdir -p bin && curl http://luchenlabs.com/lp/ecks.pl > bin/ecks.pl && chmod +x bin/ecks.pl
+
+read -rp 'Create WSL symlinks (/a, /c, /h, /s, /u)? [Yn]' yn && [[ ! $yn =~ ^[Nn]$ ]] && {
+  ln -s /mnt/c/Users/Cheezmeister/AppData /a
+  ln -s /mnt/c                            /c
+  ln -s $HOME                             /h
+  ln -s $HOME/stuff                       /s
+  ln -s /mnt/c/Users/Cheezmeister         /u
+}

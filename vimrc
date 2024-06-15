@@ -96,6 +96,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>e :e<CR>
 nnoremap <leader>z :w<CR><C>z
 nnoremap <leader>a :mksession!<CR>:xa<CR>
+vnoremap <leader>c "*y
 
 " Meta
 nnoremap <leader>me :edit $MYVIMRC<cr>
