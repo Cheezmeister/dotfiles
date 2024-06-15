@@ -16,7 +16,7 @@ alias m=$PAGER
 alias n='cowsay "¯\_(ツ)_/¯" | lolcat'
 alias o=$OPENER
 alias p='grep -P'
-alias r='!!'
+-- alias r is a zsh builtin, maybe under bash something else can happen ¯\_(ツ)_/¯
 alias q='ssh atreyu'
 alias s='ls'
 alias t='todo.sh'
