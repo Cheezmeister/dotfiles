@@ -18,7 +18,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- BEGIN PLUGINS
 local plugins = {
- "terrortylor/nvim-comment",
+  'terrortylor/nvim-comment',
+  'nvim-lua/plenary.nvim',
 
   -- 'nvim-telescope/telescope.nvim',
   -- FIXME: { "sourcegraph/sg.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
@@ -51,6 +52,7 @@ local plugins = {
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
   'kylechui/nvim-surround',
+  'f-person/git-blame.nvim',
 
 }
 -- END PLUGINS
@@ -69,6 +71,7 @@ end
 setup_plugin("nvim_comment", just_call_setup)
 setup_plugin("sg", just_call_setup)
 setup_plugin( "outline", just_call_setup)
+setup_plugin('mason')
 
 setup_plugin("nvim-surround")
 
