@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <keyboard>
+  <!-- Screenshot -->
+  <keybind key="W-m">
+		<action name="Execute">
+			<command>sh -c 'maim -s | tee /tmp/screenshot-$(date +%s).png | xclip -selection clipboard -t image/png'</command>
+		</action>
+  </keybind>
+
 	<keybind key="W-p">
 		<action name="Execute">
 			<command>sh -c 'systemctl suspend &amp; slock'</command>
@@ -10,7 +17,7 @@
 			<command>slock</command>
 		</action>
 	</keybind>
-	<keybind key="W-r">
+	<keybind key="W-S-r">
 		<action name="Reconfigure"/>
 	</keybind>
   <keybind key="W-r">
@@ -35,7 +42,6 @@
 		<action name="ToggleMaximize">
 		</action>
 	</keybind>
-
 
 	<!-- FIXME: Clean up defaults -->
 	<chainQuitKey>C-g</chainQuitKey>

@@ -155,6 +155,12 @@ nvim_lsp.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
+
+-- XML
+nvim_lsp.xml.setup {
+  on_attach = on_attach,
+}
+
 -- HTML
 nvim_lsp.html.setup {
   on_attach = on_attach,
