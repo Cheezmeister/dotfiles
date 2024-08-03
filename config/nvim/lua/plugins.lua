@@ -22,7 +22,7 @@ local plugins = {
   'nvim-lua/plenary.nvim',
 
   -- 'nvim-telescope/telescope.nvim',
-  -- FIXME: { "sourcegraph/sg.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+  { "sourcegraph/sg.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   -- 'svrana/neosolarized.nvim',
   'onsails/lspkind-nvim', -- VSCode-like pictograms
   'L3MON4D3/LuaSnip', -- Snippet engine
@@ -157,7 +157,7 @@ nvim_lsp.tsserver.setup {
 }
 
 -- XML
-nvim_lsp.xml.setup {
+nvim_lsp.lemminx.setup {
   on_attach = on_attach,
 }
 
@@ -291,7 +291,7 @@ end)
 
 setup_plugin("prettier", function(prettier)
   prettier.setup {
-    bin = 'prettierd',
+    bin = 'prettier',
     filetypes = {
       "css",
       "tsx",
