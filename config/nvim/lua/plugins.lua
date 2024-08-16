@@ -40,7 +40,7 @@ local plugins = {
   'akinsho/nvim-bufferline.lua',
 
   'glepnir/lspsaga.nvim',
-  'jose-elias-alvarez/null-ls.nvim',
+  { 'jose-elias-alvarez/null-ls.nvim', dependencies = { "nvimtools/none-ls-extras.nvim" } },
   'MunifTanjim/prettier.nvim',
 
   'lewis6991/gitsigns.nvim',
@@ -175,6 +175,10 @@ nvim_lsp.lua_ls.setup {
   }
 }
 
+nvim_lsp.svelte.setup {
+  on_attach = on_attach,
+}
+
 -- Yaml
 nvim_lsp.yamlls.setup {
   on_attach = on_attach,
@@ -301,6 +305,7 @@ setup_plugin("prettier", function(prettier)
       "typescriptreact",
       "json",
       "scss",
+      "svelte",
       "lua",
       "less"
     }
