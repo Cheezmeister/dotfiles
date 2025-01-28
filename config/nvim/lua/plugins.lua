@@ -1,4 +1,3 @@
--- FIXME: Store this in dotfiles!
 _G.vim = vim
 
 -- NOTE: https://github.com/folke/lazy.nvim#-installation
@@ -18,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- BEGIN PLUGINS
 local plugins = {
+  'yetone/avante.nvim',
   'terrortylor/nvim-comment',
   'nvim-lua/plenary.nvim',
 
@@ -208,6 +208,7 @@ setup_plugin("cmp", function(cmp)
       }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
+        { name = 'cody' },
         { name = 'buffer' },
       }),
     formatting = {
@@ -225,40 +226,43 @@ end)
 -- ...
 -- end)
 --------------------------------------------------------------------------------
-local status, ts = pcall(require, "nvim-treesitter.configs")
-if (not status) then return end
+setup_plugin("nvim-treesitter.configs", function (ts)
+  ts.setup {
+    highlight = {
+      enable = true,
+      disable = { "help" },  -- Disable Treesitter for help files
+    },
+    indent = {
+      enable = true,
+      disable = {},
+    },
+    ensure_installed = {
+      "css",
+      -- TODO: "coffeescript",
+      -- TODO: "kotlin",
+      "fish",
+      "html",
+      "javascript",
+      "json",
+      "kotlin",
+      "lua",
+      "luadoc",
+      "markdown",
+      "php",
+      "swift",
+      "toml",
+      "tsx",
+      "vim",
+      "vimdoc",
+      "yaml",
+    },
+    autotag = {
+      enable = true,
+    },
+  }
+end)
 --------------------------------------------------------------------------------
 
-ts.setup {
-  highlight = {
-    enable = true,
-    disable = {},
-  },
-  indent = {
-    enable = true,
-    disable = {},
-  },
-  ensure_installed = {
-    "css",
-    -- TODO: "coffeescript",
-    -- TODO: "kotlin",
-    "fish",
-    "html",
-    "json",
-    "javascript",
-    "kotlin",
-    "lua",
-    "php",
-    "swift",
-    "toml",
-    "tsx",
-    -- TODO: "vimdoc",
-    "yaml",
-  },
-  autotag = {
-    enable = true,
-  },
-}
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
@@ -295,7 +299,7 @@ end)
 
 setup_plugin("prettier", function(prettier)
   prettier.setup {
-    bin = 'prettier',
+    bin = 'prettierd',
     filetypes = {
       "css",
       "tsx",
