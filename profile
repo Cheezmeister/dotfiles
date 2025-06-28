@@ -18,3 +18,4 @@ export WEB_BROWSER='firefox'
 export COLOR='green'
 export DOTFILES="$HOME/dotfiles"
 export SAYER="say"
+export OPENER="xdg-open"
