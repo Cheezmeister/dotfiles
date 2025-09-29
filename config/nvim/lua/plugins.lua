@@ -40,7 +40,7 @@ local plugins = {
   'akinsho/nvim-bufferline.lua',
 
   'glepnir/lspsaga.nvim',
-  { 'jose-elias-alvarez/null-ls.nvim', dependencies = { "nvimtools/none-ls-extras.nvim" } },
+  { 'nvimtools/none-ls.nvim', dependencies = { "nvimtools/none-ls-extras.nvim" } },
   'MunifTanjim/prettier.nvim',
 
   'lewis6991/gitsigns.nvim',
@@ -68,19 +68,21 @@ local setup_plugin = function(name, cb)
   (cb or just_call_setup)(plugin)
 end
 
-setup_plugin("nvim_comment", just_call_setup)
-setup_plugin("sg", just_call_setup)
-setup_plugin( "outline", just_call_setup)
-setup_plugin('mason')
+setup_plugin("nvim_comment")
+setup_plugin("sg")
+setup_plugin("outline")
+setup_plugin("nvim_comment")
+setup_plugin("nvim-surround")
+
 
 setup_plugin("nvim-surround")
 
 
+setup_plugin('mason', function(mason) mason.setup {
+  PATH = 'prepend',
+} end)
 
 -- BEGIN MORE COPYPASTA
-
-setup_plugin("nvim_comment", just_call_setup)
-setup_plugin("nvim-surround", just_call_setup)
 
 setup_plugin("lualine", function(lualine) lualine.setup {
   options = {
@@ -150,41 +152,42 @@ end
 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- TypeScript
-nvim_lsp.ts_ls.setup {
+vim.lsp.config("ts_ls", {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
-}
+})
 
 -- XML
-nvim_lsp.lemminx.setup {
+vim.lsp.config("lemminx", {
   on_attach = on_attach,
-}
+})
 
 -- HTML
-nvim_lsp.html.setup {
+vim.lsp.config("html", {
   on_attach = on_attach,
-}
+})
 
 -- Lua
-nvim_lsp.lua_ls.setup {
+vim.lsp.config("lua_ls", {
   on_attach = on_attach,
   diagnostics = {
     -- Get the language server to recognize the `vim` global
     globals = {'vim'},
   }
-}
+})
 
-nvim_lsp.svelte.setup {
+-- Svelte
+vim.lsp.config("svelte", {
   on_attach = on_attach,
-}
+})
 
 -- Yaml
-nvim_lsp.yamlls.setup {
+vim.lsp.config("yamlls", {
   on_attach = on_attach,
   filetypes = { "yaml", "yml" },
   cmd = { "yaml-language-server", "--stdio" }
-}
+})
 
 
 --------------------------------------------------------------------------------
@@ -222,9 +225,6 @@ setup_plugin("cmp", function(cmp)
   ]]
 end)
 
--- TODO setup_plugin("nvim-treesitter.configs"
--- ...
--- end)
 --------------------------------------------------------------------------------
 setup_plugin("nvim-treesitter.configs", function (ts)
   ts.setup {
@@ -263,39 +263,29 @@ setup_plugin("nvim-treesitter.configs", function (ts)
 end)
 --------------------------------------------------------------------------------
 
-
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+setup_plugin("nvim-treesitter.parsers", function (ts)
+  local parser_config = ts.get_parser_configs()
+  parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+end)
 
 --------------------------------------------------------------------------------
-local status, saga = pcall(require, "lspsaga")
-if (not status) then return end
---------------------------------------------------------------------------------
+setup_plugin("lspsaga", function (lspsaga)
+  saga.setup({
+    server_filetype_map = {
+      typescript = 'typescript'
+    }
+  })
 
-saga.setup({
-  server_filetype_map = {
-    typescript = 'typescript'
-  }
-})
+  local opts = { noremap = true, silent = true }
+  vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+  vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
+  vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
+  vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
+  vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+end)
 
-local opts = { noremap = true, silent = true }
-vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
-vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
-vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
-vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
 
 -- --------------------------------------------------------------------------------
-setup_plugin("null-ls", function(null_ls)
-  null_ls.setup {
-    sources = {
-      null_ls.builtins.diagnostics.eslint_d.with({
-        diagnostics_format = '[eslint] #{m}\n(#{c})'
-      }),
-      null_ls.builtins.diagnostics.fish
-    }
-  }
-end)
 
 setup_plugin("prettier", function(prettier)
   prettier.setup {
@@ -326,27 +316,10 @@ setup_plugin("nvim-tree", function(tree)
   } 
 end)
 
--- load snippets from path/of/your/nvim/config/my-cool-snippets
--- FIXME(delete) require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./my-cool-snippets" } })
+-- -----------------------------------------------------------------------------
 setup_plugin("luasnip.loaders.from_vscode", function (vscode_snippets)
+  -- TODO: https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua
   vscode_snippets.lazy_load({ paths = { "./my-cool-snippets" } })
 end)
 
-
-setup_plugin("supermaven-nvim", function(supermaven)
-  supermaven.setup({
-    keymaps = {
-      accept_suggestion = "<Tab>",
-      clear_suggestion = "<C-]>",
-      accept_word = "<C-j>",
-    },
-    ignore_filetypes = { cpp = true },
-    color = {
-      suggestion_color = "#ffffff",
-      cterm = 244,
-    },
-    disable_inline_completion = false, -- disables inline completion for use with cmp
-    disable_keymaps = false -- disables built in keymaps for more manual control
-  })
-end)
 
