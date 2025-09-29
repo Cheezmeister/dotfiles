@@ -54,3 +54,4 @@ source $DOTFILES/zprompt
 source $DOTFILES/aliases
 
 alias activate_mise='eval "$(~/.local/bin/mise activate)"'
+export PATH=/usr/local/bin:~/bin:$PATH
