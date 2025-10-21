@@ -270,7 +270,7 @@ end)
 
 --------------------------------------------------------------------------------
 setup_plugin("lspsaga", function (lspsaga)
-  saga.setup({
+  lspsaga.setup({
     server_filetype_map = {
       typescript = 'typescript'
     }
