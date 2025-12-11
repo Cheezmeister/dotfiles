@@ -291,6 +291,8 @@ setup_plugin("prettier", function(prettier)
   prettier.setup {
     bin = 'prettierd',
     filetypes = {
+      "c",
+      "cpp",
       "css",
       "tsx",
       "javascript",
